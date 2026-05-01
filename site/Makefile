@@ -37,21 +37,24 @@ $(EN_HTMLS): $(BUILD)/%.html: %.jemdoc MENU $(CONF)
 	@mkdir -p $(BUILD)
 	$(JEMDOC) -c $(CONF) -o $@ $<
 	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
-	           -e 's/target="blank"/target="_blank" rel="noopener"/g' $@
+	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
+	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
 
 # === French (build/fr/) ===
 $(FR_HTMLS): $(BUILD)/fr/%.html: fr/%.jemdoc fr/MENU $(CONF)
 	@mkdir -p $(BUILD)/fr
 	cd fr && python3 ../tools/jemdoc -c ../$(CONF) -o ../$@ $*.jemdoc
 	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
-	           -e 's/target="blank"/target="_blank" rel="noopener"/g' $@
+	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
+	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
 
 # === Japanese (build/ja/) ===
 $(JA_HTMLS): $(BUILD)/ja/%.html: ja/%.jemdoc ja/MENU $(CONF)
 	@mkdir -p $(BUILD)/ja
 	cd ja && python3 ../tools/jemdoc -c ../$(CONF) -o ../$@ $*.jemdoc
 	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
-	           -e 's/target="blank"/target="_blank" rel="noopener"/g' $@
+	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
+	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
 
 $(BUILD)/mysite.css: mysite.css
 	cp mysite.css $(BUILD)/
