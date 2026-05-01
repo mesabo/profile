@@ -1,0 +1,150 @@
+# jemdoc: menu{MENU}{research.html}, nofooter
+= 研究
+
+私の研究は、*電力系統制御理論*、*深層学習*（グラフ ニューラル ネットワーク、*小型／大規模言語モデル — sLM／LLM*）、*IoT システム*、*電力系統サイバーセキュリティ*の交点に位置します。主たる成果はエネルギーおよび IoT データの時系列問題（予測、補完、異常検知）に集中しており、検証は教科書的ベンチマークから実 PMU フィールド データまでスケールし、すべて自身が運用する専用マルチ GPU サーバ上で実行しています。
+
+== 研究領域
+
+- 電力系統安定性とスマートグリッド耐障害性に向けた AI / sLM / LLM 手法
+- 時系列タスク向け、凍結 *小型言語モデル（sLM）*・LLM のスペクトル再プログラミング
+- 分散型エネルギー資源向けの *IoT* およびエッジ知能
+- マルチ妨害（遅延、パケットロス、ジッター）通信ネットワーク協調設計
+- 電力ネットワーク トポロジーへの GNN 適用
+- IoT エッジ機器を跨ぐ連合学習・知識蒸留
+- 実 PMU フィールド データに基づく SCADA 異常検知
+- 二重ドメイン（スペクトル + 時間）表現学習
+- 専用 GPU サーバ インフラ: クラスタ プロビジョニング、マルチ GPU 学習、推論デプロイ
+
+== 進行中の研究 --- *LLM 駆動の異常検知を備えたスマートグリッド協調最適化*
+
+エネルギー ディスパッチと通信ルーティングを統合する協調最適化フレームワークで、形式的安定性保証と*小型言語モデル（sLM）*ベースの SCADA 異常検知を備えます。電力網は *IoT 計装システム*として扱われ、PMU ストリーム、エッジ ゲートウェイ、SCADA エンドポイントが第一級のデータ ソースとなります。学習・推論はすべて YuLab の専用マルチ GPU サーバ上で実行されています。これは進行中の博士プロジェクト（2025 年〜）です。
+
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/all.png" target="_blank" rel="noopener"><img src="/assets/phd/all.png" alt="博士研究フレームワーク — 三本柱の概要" loading="lazy" /></a>
+~~~
+
+=== 三本柱
+
+. *形式的な遅延–安定性結合境界*。遅延マージン結合が運用データから発電機ごとに*学習*される閉形式安定性境界。
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/year1.png" target="_blank" rel="noopener"><img src="/assets/phd/year1.png" alt="Year 1 — 形式的な遅延–安定性結合境界" loading="lazy" /></a>
+<details class="more"><summary>手法と想定する検証</summary>
+<div class="more-body">
+<p><strong>二重ドメイン グラフ ニューラル ネットワーク</strong>を基盤とし、スペクトル ドメイン（電力網ラプラシアン）と時間ドメイン（PMU 時系列）で同時に動作。物理的解釈性を保つ加法的分解により、発電機ごとの結合パラメータを生成します。</p>
+<p><strong>想定する検証目標.</strong> IEEE 14, 30, 57, 118 母線ベンチマークで解析的ベースラインに対し安定性マージン誤差 5% 以下を目指す。ワークステーション GPU 1 基で 1 評価あたり 200 ms 以下を目標。</p>
+</div>
+</details>
+~~~
+. *マルチ妨害安定性解析*。遅延のみの境界を、複合妨害（遅延 + パケットロス + ジッター）に拡張し、それぞれを物理的に解釈可能な加法成分として扱います。
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/year2.png" target="_blank" rel="noopener"><img src="/assets/phd/year2.png" alt="Year 2 — マルチ妨害安定性解析" loading="lazy" /></a>
+<details class="more"><summary>手法と想定する検証</summary>
+<div class="more-body">
+<p>マージン浸食分解により、各妨害を発電機ごとに学習された重みをもつ加法成分にマップし、物理的解釈性を維持したまま成分単位の感度解析を可能にします。</p>
+<p><strong>想定する検証目標.</strong> ±20% 妨害摂動下で <strong>PEGASE 2,869 母線</strong>を含む 8 ベンチマークにおける境界の厳密性を確認、OpenDSS および pandapower 公開テスト ケースでの完全な再現性を目指す。</p>
+</div>
+</details>
+~~~
+. *sLM ベース SCADA 異常予測*。SCADA／PMU ストリームから妨害軌跡を予測し、安定性マージンが破られる前に予防ディスパッチを起動することを目指します。
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/year3.png" target="_blank" rel="noopener"><img src="/assets/phd/year3.png" alt="Year 3 — sLM ベース SCADA 異常予測" loading="lazy" /></a>
+<details class="more"><summary>手法と想定する検証</summary>
+<div class="more-body">
+<p>Spec2LLM および LLM4Imp のスペクトル再プログラミング <strong>小型言語モデル（sLM）</strong> パイプラインに基づき、IoT エッジ ゲートウェイからのトークン化された PMU ウィンドウ上で動作。制御ループが第一の柱のディスパッチ最適化器に予測を結合し、推論は学習と同じ専用 GPU サーバに配置することで 30 秒のリード タイム目標を狙います。</p>
+<p><strong>想定する検証目標.</strong> 実 PMU フィールド データで経験的な不安定性しきい値の少なくとも 30 秒前に異常をリードすることを目指し、誤警報率 5% 未満を目標とします。</p>
+</div>
+</details>
+~~~
+
+== 副次トラック --- *時系列向け言語モデルのスペクトル再プログラミング*
+
+凍結された言語モデル — *sLM* または LLM — を周波数ドメイン プロンプトで再プログラミングし、エネルギーおよび *IoT 時系列*の予測・補完・異常検知タスクを、タスクごとのファイン チューニングなしに汎化します。学習は専用 GPU サーバで実施し、*sLM* 版は IoT エッジ ゲートウェイ近傍での推論デプロイを明示的な目標としています。
+
+- *Spec2Llama* --- /Expert Systems with Applications/, IF 7.5, JCR Q1, 2026.
+- *Spec2LLM* --- IEEE ICCE 2026, Dubai.
+- *LLM4Imp* --- IEEE ICC 2026, Glasgow.
+
+~~~
+{}{raw}
+<details class="more"><summary>パイプラインの発展</summary>
+<div class="more-body">
+<p><strong>Spec2Llama</strong> はスペクトル予測を導入: 時系列トークンを学習周波数表現に投影し、凍結 Llama バックボーンに与えることで、タスクごとのファイン チューニングなしに多様な時系列を扱えるようにしました。</p>
+<p><strong>Spec2LLM</strong> は同じ着想を電力変圧器の温度予測に応用し、スペクトル–言語トークン結合をより緻密にしました。</p>
+<p><strong>LLM4Imp</strong> は時系列補完（長い欠損、不規則サンプリング）にパイプラインを拡張し、補完を周波数プロンプト補完タスクとして再定式化しました。</p>
+<p>このパイプラインが博士プロジェクト第 3 の柱（sLM ベース SCADA 異常予測）の基盤です。</p>
+</div>
+</details>
+~~~
+
+== その他主要プロジェクト
+
+~~~
+{}{raw}
+<div class="paper-grid">
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/tapformer_iot_2026.pdf" target="_blank" rel="noopener" aria-label="TAPformer architecture"><img src="/assets/papers/tapformer_iot_2026.png" alt="TAPformer architecture" loading="lazy" /></a>
+    <h3>TAPformer</h3>
+    <p class="venue">Internet of Things (Elsevier) &middot; IF&nbsp;7.6, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.iot.2026.101895" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
+    <p>非定常ストリーム向けの適応注意機構と時間射影エンコーディングによる長期 <strong>IoT</strong> 負荷予測。専用 GPU サーバ上で学習・評価。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/tsformer_icufn_2025.pdf" target="_blank" rel="noopener" aria-label="TSFormer architecture"><img src="/assets/papers/tsformer_icufn_2025.png" alt="TSFormer architecture" loading="lazy" /></a>
+    <h3>TSFormer</h3>
+    <p class="venue">ICUFN 2025 &middot; Lisbon &middot; <a href="https://ieeexplore.ieee.org/document/11170021" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>学習可能な位置エンコーディングを備えた多時間軸 transformer。<strong>IoT</strong> 電力網の非定常需要を対象。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/multillm_vtc_2026.pdf" target="_blank" rel="noopener" aria-label="Multi-LLM ensembles"><img src="/assets/papers/multillm_vtc_2026.png" alt="Multi-LLM ensembles" loading="lazy" /></a>
+    <h3>グラフ制約多 LLM アンサンブル</h3>
+    <p class="venue">IEEE VTC2026-Spring &middot; Nice</p>
+    <p>構造的因果モデルに根ざした、時間 <strong>IoT</strong> センサ ネットワーク上の複数 LLM（および <strong>sLM</strong> 派生）アンサンブル。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/spec2llama_eswa_2026.pdf" target="_blank" rel="noopener" aria-label="Spec2Llama architecture"><img src="/assets/papers/spec2llama_eswa_2026.png" alt="Spec2Llama architecture" loading="lazy" /></a>
+    <h3>Spec2Llama</h3>
+    <p class="venue">Expert Systems with Applications &middot; IF&nbsp;7.5, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.eswa.2026.131986" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
+    <p>凍結 Llama（<strong>sLM</strong> スケールのバックボーンとして利用）に周波数トークンを与えるスペクトル予測。<strong>IoT</strong> 流を含む多様な時系列タスクに汎化。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/spec2llm_icce_2026.pdf" target="_blank" rel="noopener" aria-label="Spec2LLM architecture"><img src="/assets/papers/spec2llm_icce_2026.png" alt="Spec2LLM architecture" loading="lazy" /></a>
+    <h3>Spec2LLM</h3>
+    <p class="venue">IEEE ICCE 2026 &middot; Dubai &middot; <a href="https://ieeexplore.ieee.org/document/11449688" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p><strong>IoT 計装</strong>変圧器設備における温度予測のためのスペクトル–言語再プログラミング、<strong>sLM</strong> デプロイを目指す。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/llm4imp_icc_2026.pdf" target="_blank" rel="noopener" aria-label="LLM4Imp architecture"><img src="/assets/papers/llm4imp_icc_2026.png" alt="LLM4Imp architecture" loading="lazy" /></a>
+    <h3>LLM4Imp</h3>
+    <p class="venue">IEEE ICC 2026 &middot; Glasgow</p>
+    <p>大量欠損下の <strong>IoT</strong> 時系列補完のため、スペクトル プロンプトで誘導した凍結 LLM（軽量 <strong>sLM</strong> バックボーンも対象）。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/cnnbilstm_vtc_2024.pdf" target="_blank" rel="noopener" aria-label="CNN-BiLSTM hybrid"><img src="/assets/papers/cnnbilstm_vtc_2024.png" alt="CNN-BiLSTM hybrid" loading="lazy" /></a>
+    <h3>注意機構付きハイブリッド CNN-BiLSTM <span class="award-pill">★ VTS 2024 Award</span></h3>
+    <p class="venue">IEEE VTC2024-Fall &middot; Washington D.C. &middot; <a href="https://ieeexplore.ieee.org/document/10757868" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>専用 GPU インフラ上の短期 <strong>IoT</strong> 負荷予測向け、データ拡張併用の注意機構付きハイブリッド CNN-BiLSTM。IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award を受賞。</p>
+  </article>
+
+</div>
+~~~
+
+== 二年計画（2027 年 4 月 -- 2029 年 3 月）
+
+- *年次 1.* 第 1 の柱 --- 形式的結合境界、IEEE 14/30/57/118 検証、IEEE Trans. Smart Grid 投稿、IEEE ICC または GLOBECOM での発表。
+- *年次 2.* 第 2・第 3 の柱 --- PEGASE 2,869 母線へのマルチ妨害拡張、実 PMU データへの sLM ベース SCADA、/Applied Energy/ および IEEE Trans. Power Systems への投稿、博士論文最終化。
+
+== 影響と展望
+
+博士研究は、伝統的に分かれていた三領域（電力系統制御理論、深層学習、電力系統サイバーセキュリティ）を結ぶことを目指し、新興経済圏のスマートグリッド耐障害性に関する*日本／コートジボワール 研究架橋*の種をまくことを意図しています。
+
+論文一覧は[publications.html 出版物]を参照してください。

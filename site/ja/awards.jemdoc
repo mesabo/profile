@@ -1,0 +1,34 @@
+# jemdoc: menu{MENU}{awards.html}, nofooter
+= 受賞
+
+~~~
+{}{raw}
+<div class="paper-grid">
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/awards/vtc2024_award.pdf" target="_blank" rel="noopener" aria-label="IEEE VTS 2024 学生論文賞 証書"><img src="/assets/awards/vtc2024_award.png" alt="IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award 証書" loading="lazy" /></a>
+    <h3>IEEE VTS Tokyo/Japan Chapter — Student Paper Award &amp; Encouragement Award <span class="award-pill">2024</span></h3>
+    <p class="venue">VTC2024-Fall &middot; Washington D.C., USA &middot; 2024 年 10 月</p>
+    <p>論文 <em>Enhancing Short-Term Load Forecasting in IoT: A Hybrid Attention-based CNN-BiLSTM with Data Augmentation</em> に対する受賞。IoT・エネルギー システム向け応用機械学習における優れた学生論文として評価。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/awards/jica_development_studies_program_2025.pdf" target="_blank" rel="noopener" aria-label="JICA 開発研究プログラム 2025 修了証"><img src="/assets/awards/jica_development_studies_program_2025.png" alt="JICA 開発研究プログラム 2025 修了証" loading="lazy" /></a>
+    <h3>JICA 開発研究プログラム（JICA 専用講座） <span class="award-pill">2025</span></h3>
+    <p class="venue"><a href="https://www.jica.go.jp/index.html" target="_blank" rel="noopener">独立行政法人国際協力機構（JICA）</a> &middot; 2025</p>
+    <p>新興経済圏向けの技術移転と持続可能なインフラに焦点を当てた、JICA 専用大学院講座を修了。</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/awards/icecet_reviewer_certificate_2026.pdf" target="_blank" rel="noopener" aria-label="IEEE ICECET 2026 査読委員証"><img src="/assets/awards/icecet_reviewer_certificate_2026.png" alt="IEEE ICECET 2026 査読委員証" loading="lazy" /></a>
+    <h3>査読委員 — IEEE ICECET 2026 <span class="award-pill">2026</span></h3>
+    <p class="venue">IEEE International Conference on Electrical, Computer and Energy Technologies &middot; Rome, Italy &middot; 2026 年 7 月</p>
+    <p>IEEE Italy Section により任命された査読委員。</p>
+  </article>
+
+</div>
+~~~
+
+== その他のサービス活動
+
+- レビュアー、/Theoretical Computer Science/（Elsevier） --- 理論計算機科学のトップ ジャーナル（ISSN 0304-3975）の査読を担当。

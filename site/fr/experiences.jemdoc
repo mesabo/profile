@@ -1,0 +1,140 @@
+# jemdoc: menu{MENU}{experiences.html}, nofooter
+= Expériences
+
+== Formation
+
+=== Doctorat (博士課程), Informatique appliquée --- Université Hosei, Tokyo
+/2025 -- 2028 (prévu)/
+
+Graduate School of Science and Engineering (Informatique appliquée), [https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/ *YuLab*], [https://iist.hosei.ac.jp campus IIST de Koganei]. Recherche doctorale sur des méthodes *IA / sLM / LLM* pour la stabilité des smart-grids, l'analyse multi-impairment et la détection d'anomalies SCADA sur des systèmes électriques *instrumentés IoT*. Tous les entraînements et inférences tournent sur des serveurs multi-GPU dédiés que je provisionne, maintiens et fais évoluer. Directeur de thèse: [https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/ Pr Keping Yu] (parmi les *World's Top 2% Scientists*, Stanford / Elsevier, édition 2025).
+
+=== Master, Informatique appliquée --- Université Hosei, Tokyo
+/2023 -- 2025/
+
+Recherche de master sur la prévision basée transformers pour systèmes énergétiques IoT (TAPformer, TSFormer, hybride CNN-BiLSTM). Article VTC2024-Fall récompensé par le IEEE VTS Tokyo/Japan Chapter Student Paper Award.
+
+== Expérience de recherche
+
+=== Chercheur doctorant --- YuLab, Université Hosei
+/2025 -- présent, Tokyo/
+
+Premier auteur de *2 articles de revue Q1* et *5 articles de conférence IEEE phares* sur les systèmes énergétiques *IoT* et la prévision / détection d'anomalies basée *sLM*. Construction d'un cadre de co-optimisation smart-grid avec bornes formelles et prédiction d'anomalies SCADA basée *sLM*, le tout sur un serveur multi-GPU dédié au YuLab.
+~~~
+{}{raw}
+<details class="more"><summary>Mon quotidien</summary>
+<div class="more-body">
+<ul>
+  <li>Conception d'architectures GNN à double domaine pour la stabilité des systèmes électriques à grande échelle (jusqu'à 2 869 bus, benchmark PEGASE).</li>
+  <li>Développement du pipeline de reprogrammation spectrale-vers-langage (Spec2Llama, Spec2LLM, LLM4Imp) ciblant LLM et <strong>petit modèle de langage (sLM)</strong> pour un déploiement IoT-edge.</li>
+  <li>Provisionnement et exploitation d'un <strong>serveur multi-GPU dédié</strong> du laboratoire: environnement CUDA / PyTorch, jobs distribués, checkpointing, services d'inférence.</li>
+  <li>Pilotage des collaborations internationales avec King Saud University (Pr Tolba, Pr Alfarraj), Mohamed Bin Zayed University of AI (Pr Guizani), University of British Columbia (Pr Leung).</li>
+  <li>Mentorat des nouveaux étudiants de master du YuLab sur les architectures transformer, méthodes spectrales et workflows GPU-cluster.</li>
+</ul>
+</div>
+</details>
+~~~
+
+=== Chercheur master --- YuLab, Université Hosei
+/2023 -- 2025, Tokyo/
+
+Travaux fondamentaux sur les transformers à attention pour la prévision *IoT* et l'intelligence en périphérie. Mise en place du pipeline d'entraînement GPU du laboratoire, repris et étendu pendant le doctorat. L'article VTC2024-Fall a remporté le *IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award*.
+~~~
+{}{raw}
+<details class="more"><summary>Travaux du master</summary>
+<div class="more-body">
+<ul>
+  <li>TAPformer (prévision long-terme IoT), TSFormer (transformer multi-horizon), et le CNN-BiLSTM à attention hybride primé.</li>
+  <li>Démarrage de la prévision spectrale, qui a évolué en Spec2Llama / Spec2LLM / LLM4Imp pendant le doctorat.</li>
+  <li>Présentations orales en premier auteur à IEEE VTC2024-Fall et ICUFN 2025.</li>
+</ul>
+</div>
+</details>
+~~~
+
+== Expérience industrielle
+
+=== Développeur Full-stack & IA --- *D'isum Inc.*
+/Sept. 2024 -- Juin 2025, Tokyo · Temps partiel/
+
+- *Sensor Data Pipeline Architect & Analyst* --- conception de pipelines à partir de données capteurs brutes.
+- *Sensor Data Specialist* --- développement applicatif, prototypage et intégration; périmètre complet incluant développement, architecture / prototypes et collaboration d'équipe sur l'intégration logicielle cœur.
+- *Precision Sensor Data Engineer --- Analytics, ML Prototypes & System Fusion* --- éléments ML / prédictifs, prototypage, et intégration de nouveaux systèmes avec l'existant.
+
+=== Stage --- *[https://www.jica.go.jp/french/index.html JICA (Agence japonaise de coopération internationale)]*
+/Juillet 2024, Tokyo --- 1 mois/
+
+Introduction pratique à l'*IA générative appliquée à des problèmes industriels réels*: découverte, prototypage et démonstration de solutions LLM pour la pratique du conseil. Première exposition substantielle à la construction de systèmes GenAI en production pour clients industriels.
+
+=== Stand TICAD9 --- représentant *[https://www.jica.go.jp/french/index.html JICA]*
+/Août 2025, Yokohama/
+
+Retour pour soutenir JICA à la *9e Conférence internationale de Tokyo sur le développement de l'Afrique ([https://www.jica.go.jp/french/our_work/types_of_assistance/ticad/index.html TICAD9])*. J'ai animé le stand JICA et présenté des prototypes ML / GenAI appliqués aux énergies et infrastructures africaines à un public international, dont des délégations africaines.
+
+== Ingénierie IA / backend --- en cours
+
+- *Plateforme EKKOU* --- développement full-stack d'une plateforme IA avec service de modèles sur backend GPU dédié.
+- *Déploiement de serveurs GPU dédiés* --- au YuLab et sur projets engineering, propriété de bout en bout: démarrage matériel, installation CUDA / pilotes, conteneurs et CI, jobs *sLM* et LLM, déploiement d'inférence, supervision.
+
+~~~
+{}{raw}
+<details class="more"><summary>Travail open-source IA / backend</summary>
+<div class="more-body">
+<p>Repos publics sur <a href="https://github.com/mesabo">github.com/mesabo</a>: prévision de séries (<em>hataformer</em>, <em>iTransformers</em>, <em>ForecastNet</em>), génération NLP (<em>GenerativeTextAI</em>), architectures d'agents (<em>AIOS-Agent</em>, <em>Energent-AI</em>) et déploiement ML (<em>HousePricePredictionApi</em>). Liste complète sur la page <a href="other.html">Autres</a>.</p>
+</div>
+</details>
+~~~
+
+== Ingénierie logicielle full-stack
+
+Web (React + Node.js / Flask, REST et GraphQL, MongoDB) et mobile (Flutter / Dart) en production. 40+ repos publics sur [https://github.com/mesabo github.com/mesabo].
+
+~~~
+{}{raw}
+<details class="more"><summary>Stack et projets</summary>
+<div class="more-body">
+<ul>
+  <li><strong>Web:</strong> frontends React consommant des backends Flask ou Node.js GraphQL; MongoDB et PostgreSQL.</li>
+  <li><strong>Mobile:</strong> applications Flutter / Dart &mdash; <em>crudium</em>&nbsp;⭐ (bibliothèque scaffolding), <em>chronohouse</em> (suivi de temps), <em>progistack_mobile</em> (productivité), <em>flutter_graphql_io</em> (intégration GraphQL).</li>
+  <li><strong>DevOps:</strong> workflows Docker (<em>debug_with_docker</em>).</li>
+</ul>
+</div>
+</details>
+~~~
+
+== Mentorat et engagement
+
+- *Teaching Assistant & Research Assistant* --- département IIST, Université Hosei. Soutien aux enseignants pour les cours en anglais: *Project-Based Learning (PBL)* en 4e année et encadrement de *卒業研究 (recherche de fin d'études)* pour étudiants de master.
+- Mentor de *15+ étudiants à l'ESATIC* (École Supérieure Africaine des TIC, Côte d'Ivoire); 5 admis dans des cursus de troisième cycle au Japon et à l'étranger.
+- Conférencier bénévole dans *2 lycées japonais* sur l'IA et les systèmes énergétiques intelligents (200+ étudiants touchés).
+- Présentateur aux séminaires du YuLab sur les architectures transformer et méthodes spectrales.
+
+== Service
+
+- Reviewer, /Theoretical Computer Science/ (Elsevier).
+- Membre du comité de lecture, IEEE ICECET 2026 (Rome, IEEE Italy Section).
+
+== CV --- téléchargements
+
+Choisissez la version qui correspond à votre besoin:
+
+~~~
+{}{raw}
+<div class="cv-buttons">
+  <a href="/assets/cv/AI_EN.pdf" target="_blank" rel="noopener">
+    <strong>Ingénieur IA &amp; Backend</strong>
+    <small>English &middot; PDF</small>
+  </a>
+  <a href="/assets/cv/AI_JA.pdf" target="_blank" rel="noopener">
+    <strong>Ingénieur IA &amp; Backend</strong>
+    <small>日本語 &middot; PDF</small>
+  </a>
+  <a href="/assets/cv/SE_EN.pdf" target="_blank" rel="noopener">
+    <strong>Ingénieur Full-stack</strong>
+    <small>English &middot; PDF</small>
+  </a>
+  <a href="/assets/cv/SE_JA.pdf" target="_blank" rel="noopener">
+    <strong>Ingénieur Full-stack</strong>
+    <small>日本語 &middot; PDF</small>
+  </a>
+</div>
+~~~

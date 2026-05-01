@@ -7,13 +7,17 @@
 
 JEMDOC := python3 tools/jemdoc
 CONF   := mysite.conf
-PAGES  := index publications research experiences awards other fr ja
+PAGES  := index publications research experiences awards other
 BUILD  := build
-HTMLS  := $(addprefix $(BUILD)/,$(addsuffix .html,$(PAGES)))
+
+EN_HTMLS := $(addprefix $(BUILD)/,$(addsuffix .html,$(PAGES)))
+FR_HTMLS := $(addprefix $(BUILD)/fr/,$(addsuffix .html,$(PAGES)))
+JA_HTMLS := $(addprefix $(BUILD)/ja/,$(addsuffix .html,$(PAGES)))
+HTMLS    := $(EN_HTMLS) $(FR_HTMLS) $(JA_HTMLS)
 
 REMOTE := https://github.com/mesabo/mesabo.github.io.git
 
-.PHONY: all build serve clean deploy
+.PHONY: all build serve clean deploy gallery
 
 all: build
 
@@ -22,20 +26,32 @@ build: gallery $(BUILD) $(HTMLS) $(BUILD)/mysite.css $(BUILD)/jemdoc-default.css
 $(BUILD)/README.md: deploy_README.md
 	cp deploy_README.md $(BUILD)/README.md
 
-# regenerate the photo gallery in other.jemdoc from assets/photos/*
-.PHONY: gallery
 gallery:
 	@python3 tools/gen_gallery.py
 
 $(BUILD):
 	mkdir -p $(BUILD)
 
-$(BUILD)/%.html: %.jemdoc MENU $(CONF)
+# === English (root) — static pattern rule ===
+$(EN_HTMLS): $(BUILD)/%.html: %.jemdoc MENU $(CONF)
 	@mkdir -p $(BUILD)
 	$(JEMDOC) -c $(CONF) -o $@ $<
-	@# fix jemdoc smart-quote bug on target attribute
-	@sed -i '' 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' $@
-	@sed -i '' 's/target="blank"/target="_blank" rel="noopener"/g' $@
+	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
+	           -e 's/target="blank"/target="_blank" rel="noopener"/g' $@
+
+# === French (build/fr/) ===
+$(FR_HTMLS): $(BUILD)/fr/%.html: fr/%.jemdoc fr/MENU $(CONF)
+	@mkdir -p $(BUILD)/fr
+	cd fr && python3 ../tools/jemdoc -c ../$(CONF) -o ../$@ $*.jemdoc
+	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
+	           -e 's/target="blank"/target="_blank" rel="noopener"/g' $@
+
+# === Japanese (build/ja/) ===
+$(JA_HTMLS): $(BUILD)/ja/%.html: ja/%.jemdoc ja/MENU $(CONF)
+	@mkdir -p $(BUILD)/ja
+	cd ja && python3 ../tools/jemdoc -c ../$(CONF) -o ../$@ $*.jemdoc
+	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
+	           -e 's/target="blank"/target="_blank" rel="noopener"/g' $@
 
 $(BUILD)/mysite.css: mysite.css
 	cp mysite.css $(BUILD)/

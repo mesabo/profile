@@ -21,7 +21,9 @@ from typing import Iterable
 ROOT = Path(__file__).resolve().parents[1]
 PHOTOS = ROOT / "assets" / "photos"
 META = PHOTOS / "_trips.json"
-JEMDOC = ROOT / "other.jemdoc"
+# All three language versions of other.jemdoc share the same gallery markup
+# (asset paths are absolute, so no per-language path adjustment is needed).
+JEMDOCS = [ROOT / "other.jemdoc", ROOT / "fr" / "other.jemdoc", ROOT / "ja" / "other.jemdoc"]
 
 START_MARKER = "<!-- GALLERY-AUTO-START -->"
 END_MARKER = "<!-- GALLERY-AUTO-END -->"
@@ -59,7 +61,7 @@ def render_trip(meta: dict) -> str:
         head = f"  <h3>{title}{date_html}</h3>\n"
     cells = []
     for i, img in enumerate(images, 1):
-        rel = f"assets/photos/{slug}/{img.name}"
+        rel = f"/assets/photos/{slug}/{img.name}"
         alt = slug_to_alt(slug, i)
         cells.append(
             f'    <a class="trip-photo" href="{rel}" target="_blank" rel="noopener">'
@@ -74,10 +76,10 @@ def render_section(trips: Iterable[dict]) -> str:
     return "\n\n".join(rendered)
 
 
-def replace_block(text: str, start: str, end: str, payload: str) -> str:
+def replace_block(text: str, start: str, end: str, payload: str, where: str = "") -> str:
     pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), flags=re.DOTALL)
     if not pattern.search(text):
-        sys.exit(f"missing markers {start!r} / {end!r} in {JEMDOC}")
+        sys.exit(f"missing markers {start!r} / {end!r} in {where}")
     body = f"{start}\n{payload}\n{end}"
     return pattern.sub(body, text)
 
@@ -99,10 +101,16 @@ def main() -> None:
     travels = [t for t in trips if t.get("section") == "travels"]
     hobbies = [t for t in trips if t.get("section") == "hobbies"]
 
-    txt = JEMDOC.read_text()
-    txt = replace_block(txt, START_MARKER, END_MARKER, render_section(travels))
-    txt = replace_block(txt, HOBBIES_START, HOBBIES_END, render_section(hobbies))
-    JEMDOC.write_text(txt)
+    written = []
+    for jdoc in JEMDOCS:
+        if not jdoc.exists():
+            continue
+        txt = jdoc.read_text()
+        txt = replace_block(txt, START_MARKER, END_MARKER, render_section(travels), where=str(jdoc))
+        txt = replace_block(txt, HOBBIES_START, HOBBIES_END, render_section(hobbies), where=str(jdoc))
+        jdoc.write_text(txt)
+        written.append(jdoc.relative_to(ROOT).as_posix())
+    print(f"  wrote: {', '.join(written)}")
 
     travel_count = sum(len(list_images(PHOTOS / t["dir"])) for t in travels)
     hobby_count = sum(len(list_images(PHOTOS / t["dir"])) for t in hobbies)

@@ -1,0 +1,61 @@
+# jemdoc: menu{MENU}{index.html}, nofooter
+= 自己紹介
+
+~~~
+{}{raw}
+<script>document.body.classList.add('page-index');</script>
+<div class="hero">
+  <img src="/assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
+  <div class="hero-text">
+    <h1 class="hero-name">Messou Franck Junior Aboya</h1>
+    <p class="title">博士課程 &middot; 応用情報工学</p>
+    <p class="affiliation">
+      理工学研究科 &middot; <strong><a href="https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/" target="_blank" rel="noopener">YuLab</a></strong><br />
+      <a href="https://www.hosei.ac.jp" target="_blank" rel="noopener">法政大学</a> &middot;
+      <a href="https://iist.hosei.ac.jp" target="_blank" rel="noopener">IIST 小金井キャンパス</a>, 東京
+    </p>
+    <div class="facet-tags">
+      <span>研究者</span>
+      <span>AI / バックエンド エンジニア</span>
+      <span>フルスタック エンジニア</span>
+    </div>
+  </div>
+</div>
+~~~
+
+法政大学 大学院 理工学研究科 応用情報工学専攻 YuLab（IIST 小金井キャンパス）の博士課程に在籍しています。研究テーマは、*AI*・*小型／大規模言語モデル（sLM／LLM）*・*IoT* を活用したスマートグリッドおよび IoT システムの安定性・耐障害性向上であり、時系列予測、スペクトル再プログラミング、グラフベース制御を中心に取り組んでいます。学習および推論はすべて、自身が構築・運用する専用のマルチ GPU サーバ上で実行しています。
+
+研究のかたわら、本番環境向けの *AI／バックエンド システム*や、*Web・モバイル フルスタック アプリケーション*の開発にも従事しており、日本・湾岸諸国・西アフリカのパートナーと連携しています。
+
+== 研究分野
+
+- 電力系統安定性とスマートグリッド耐障害性向けの AI / sLM / LLM 手法
+- 時系列タスク向け、凍結 *小型言語モデル（sLM）*・LLM のスペクトル再プログラミング
+- 分散型エネルギー資源向けの *IoT* およびエッジ知能
+- エネルギー ディスパッチと通信ルーティングの協調最適化
+- 電力ネットワーク トポロジーへの GNN 適用
+- IoT エッジ機器を跨ぐ連合学習・知識蒸留
+
+== エンジニアリング分野
+
+- *専用 GPU サーバ*上の本番 ML パイプライン（学習・推論・デプロイ）
+- *IoT* データ取り込みとエッジ モデル デプロイ
+- Python（Flask）／Node.js による REST／GraphQL バックエンド
+- データ層: MongoDB／SQL
+- フロントエンド（React）およびモバイル（Flutter／Dart）
+
+== 主な実績
+
+- 2026 年に *Q1 ジャーナル論文 2 本*（[https://www.sciencedirect.com/journal/internet-of-things Internet of Things], IF 7.6 ／ [https://www.sciencedirect.com/journal/expert-systems-with-applications Expert Systems with Applications], IF 7.5）— *IoT* 時系列および *sLM* ベース予測。
+- IEEE フラッグシップ国際会議（VTC、ICUFN、ICCE、ICC）で *第一著者論文 5 本*。
+- *★ IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award*（VTC2024-Fall、Washington D.C.）。
+- /Theoretical Computer Science/（Elsevier）レビュアー、IEEE ICECET 2026 査読委員（IEEE Italy Section）。
+- 専用 GPU サーバ上で *PEGASE 2,869 母線*までのベンチマークによるスマートグリッド協調最適化検証。
+
+== 各ページへ
+
+- [publications.html 出版物] --- Q1 ジャーナル 2 本 + IEEE フラッグシップ会議 8 本
+- [research.html 研究] --- 進行中の博士プロジェクト + スペクトル再プログラミング軸
+- [experiences.html 経歴] --- キャリアと CV ダウンロード（AI / SE、英 / 日）
+- [awards.html 受賞] --- VTS 2024 学生論文賞、査読委員等
+- [other.html その他] --- オープンソース、メンタリング、出張・写真

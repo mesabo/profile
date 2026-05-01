@@ -1,0 +1,70 @@
+# jemdoc: menu{MENU}{publications.html}, nofooter
+= Publications
+
+Mise à jour 2026. *Gras* = premier auteur. Total: 2 articles de revue Q1, 9 articles de conférence internationale IEEE à comité de lecture, 1 prix, 2 missions de service.
+
+Pour le compte de citations en temps réel et toute publication récente, voir mon [https://scholar.google.com/citations?user=tHBBTIEAAAAJ profil Google Scholar].
+
+== Articles de revue à comité de lecture
+
+. *Messou Franck Junior Aboya*, Jinhua Chen, Shilong Zhang, Tong Liu, Amr Tolba, Osama Alfarraj, Keping Yu.\n
+[https://doi.org/10.1016/j.iot.2026.101895 /TAPformer: A Transformer with Adaptive Attention and Temporal Projection Encoding for Long-Term Electricity Load Forecasting in IoT Systems./]\n
+Internet of Things, Elsevier, vol. 30, p. 101895, 2026. *(IF 7.6, JCR Q1)*
+. *Messou Franck Junior Aboya*, Jinhua Chen, Yu Tao, Keping Yu, Osama Alfarraj, Amr Tolba.\n
+[https://doi.org/10.1016/j.eswa.2026.131986 /Spec2Llama: A Spectral-Aware Forecasting Approach for Versatile Time Series Analysis./]\n
+Expert Systems with Applications, Elsevier, p. 131986, 2026. *(IF 7.5, JCR Q1)*
+
+== Conférences internationales --- premier auteur
+
+. *Messou Franck Junior Aboya*, Jinhua Chen, Robert Katabarwa, Zihan Zhao, Keping Yu.\n
+[https://ieeexplore.ieee.org/document/10757868 /Enhancing Short-Term Load Forecasting in Internet of Things: A Hybrid Attention-based CNN-BiLSTM with Data Augmentation Approach./]\n
+IEEE 100th Vehicular Technology Conference (VTC2024-Fall), Washington D.C., USA, octobre 2024. (oral)\n
+*★ IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award and Encouragement Award*
+. *Messou Franck Junior Aboya*, Jinhua Chen, Tong Liu, Shilong Zhang, Keping Yu.\n
+[https://ieeexplore.ieee.org/document/11170021 /TSFormer: Temporal-Aware Transformer for Multi-Horizon Forecasting with Learnable Positional Encodings and Attention Mechanisms./]\n
+ICUFN 2025, Lisbonne, Portugal, pp. 600-605, 2025. (oral)
+. *Messou Franck Junior Aboya*, Jinhua Chen, Tong Liu, Shilong Zhang, Weiyu Wang, Yu Tao, Keping Yu.\n
+[https://ieeexplore.ieee.org/document/11449688 /Spec2LLM: A Spectral-to-Language Reprogramming Framework for Power Transformer Temperature Forecasting./]\n
+IEEE 44th International Conference on Consumer Electronics (ICCE 2026), Dubaï, ÉAU, février 2026. (oral, présenté)
+. *Messou Franck Junior Aboya*, Jinhua Chen, Tong Liu, Shilong Zhang, Weiyu Wang, Yu Tao, Keping Yu.\n
+/LLM4Imp: Leveraging Frozen Large Language Models with Spectral Prompts for Time-Series Imputation./\n
+IEEE International Conference on Communications (ICC 2026), Glasgow, UK, mai 2026. (oral)
+. *Messou Franck Junior Aboya*, Zihan Zhao, Jinhua Chen, Shilong Zhang, Tong Liu, Weiyu Wang, Keping Yu.\n
+/Large Language Models for Temporal Sensor Networks: Graph-Constrained Multi-LLM Ensembles via Structural Causal Models./\n
+IEEE 103rd Vehicular Technology Conference (VTC2026-Spring), Nice, France, juin 2026. (oral)
+
+== Conférences internationales --- co-auteur
+
+. Jinhua Chen, Shilong Zhang, Tong Liu, *Messou Franck Junior Aboya*, Keping Yu.\n
+/Enhancing Federated Learning in Consumer Electronics with Decoupled Knowledge Distillation against Data Poisoning./\n
+IEEE 22nd Consumer Communications and Networking Conference (CCNC 2025), Las Vegas, USA, 2025. (oral)
+. Shilong Zhang, Tong Liu, Jinhua Chen, *Messou Franck Junior Aboya*, Keping Yu, Mohsen Guizani.\n
+/Dynamic IoT Resource Allocation Using Graph Reinforcement Learning with Hypergraph Convolutions./\n
+IEEE 101st Vehicular Technology Conference (VTC2025-Spring), pp. 1-5, 2025. (oral)
+. Tong Liu, Shilong Zhang, Jinhua Chen, *Messou Franck Junior Aboya*, Chinmay Chakraborty, Keping Yu, Victor C. M. Leung.\n
+/IoT-Enabled Energy Harvesting MEC Network with RIS: Joint Phase Shift and Task Offloading Optimization./\n
+IEEE Global Communications Conference (GLOBECOM 2025), pp. 1706-1711, 2025. (oral)
+
+== Distinctions
+
+- *IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award and Encouragement Award* --- VTC2024-Fall, Washington D.C., octobre 2024. Récompense pour des travaux étudiants exceptionnels en apprentissage machine appliqué à l'IoT et aux systèmes énergétiques. Voir la [awards.html page Distinctions] pour le certificat.
+
+== Service académique
+
+- Reviewer, /Theoretical Computer Science/, Elsevier (ISSN 0304-3975).
+- Membre du comité de lecture, IEEE ICECET 2026, Rome, Italie, juillet 2026 --- IEEE Italy Section.
+
+~~~
+{}{raw}
+<details class="more"><summary>Catégories des conférences</summary>
+<div class="more-body">
+<ul>
+  <li><strong>VTC</strong> &mdash; conférence phare de l'IEEE VTS, deux fois par an, véhicules / IoT / sans fil.</li>
+  <li><strong>GLOBECOM, ICC</strong> &mdash; conférences phares jumelles de l'IEEE ComSoc.</li>
+  <li><strong>ICCE</strong> &mdash; conférence phare de l'IEEE Consumer Electronics Society.</li>
+  <li><strong>CCNC</strong> &mdash; conférence réseau de l'IEEE CE Society.</li>
+  <li><strong>ICUFN</strong> &mdash; conférence internationale sur les réseaux ubiquitaires.</li>
+</ul>
+</div>
+</details>
+~~~

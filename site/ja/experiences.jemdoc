@@ -1,0 +1,140 @@
+# jemdoc: menu{MENU}{experiences.html}, nofooter
+= 経歴
+
+== 学歴
+
+=== 博士課程, 応用情報工学 --- 法政大学, 東京
+/2025 -- 2028（予定）/
+
+法政大学 大学院 理工学研究科 応用情報工学専攻、[https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/ *YuLab*]、[https://iist.hosei.ac.jp IIST 小金井キャンパス]。スマートグリッド安定性、マルチ妨害解析、*IoT 計装*電力系統での SCADA 異常検知に関する *AI / sLM / LLM* 手法の博士研究。学習・推論はすべて、自身が構築・運用・拡張する専用マルチ GPU サーバ上で実行。指導教員: [https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/ Keping Yu 教授]（Stanford / Elsevier *World's Top 2% Scientists* 2025 年版に選出）。
+
+=== 修士課程, 応用情報工学 --- 法政大学, 東京
+/2023 -- 2025/
+
+IoT エネルギー システム向けの transformer ベース予測（TAPformer、TSFormer、ハイブリッド CNN-BiLSTM）に関する修士研究。VTC2024-Fall 論文で IEEE VTS Tokyo/Japan Chapter 学生論文賞を受賞。
+
+== 研究経験
+
+=== 博士研究員 --- YuLab, 法政大学
+/2025 -- 現在, 東京/
+
+*IoT* エネルギー システムおよび *sLM* ベース予測／異常検知に関する *Q1 ジャーナル論文 2 本*および *IEEE フラッグシップ会議論文 5 本*の第一著者。形式的境界と *sLM* ベース SCADA 異常予測を備えるスマートグリッド協調最適化フレームワークを構築中で、すべて YuLab 内の専用マルチ GPU サーバで稼働。
+~~~
+{}{raw}
+<details class="more"><summary>日々の業務</summary>
+<div class="more-body">
+<ul>
+  <li>大規模電力系統安定性解析（最大 2,869 母線、PEGASE ベンチマーク）向けの二重ドメイン GNN アーキテクチャ設計。</li>
+  <li>LLM および <strong>小型言語モデル（sLM）</strong> 双方をターゲットとするスペクトル–言語再プログラミング パイプライン（Spec2Llama、Spec2LLM、LLM4Imp）の開発。IoT エッジ デプロイを想定。</li>
+  <li>研究室向け<strong>専用マルチ GPU サーバ</strong>の構築・運用: CUDA / PyTorch 環境、分散学習ジョブ、モデル チェックポイント、推論サービス。</li>
+  <li>King Saud University（Tolba 教授、Alfarraj 教授）、Mohamed Bin Zayed University of AI（Guizani 教授）、University of British Columbia（Leung 教授）との国際共同研究をリード。</li>
+  <li>YuLab 新規修士学生に対する transformer アーキテクチャ、スペクトル手法、GPU クラスタ ワークフローの指導。</li>
+</ul>
+</div>
+</details>
+~~~
+
+=== 修士研究員 --- YuLab, 法政大学
+/2023 -- 2025, 東京/
+
+*IoT* 負荷予測およびエッジ知能向けの注意機構付き transformer の基礎研究。博士課程に引き継がれた研究室 GPU サーバ学習パイプラインを構築。修士在籍時の VTC2024-Fall 論文で *IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award* を受賞。
+~~~
+{}{raw}
+<details class="more"><summary>修士課程で構築したもの</summary>
+<div class="more-body">
+<ul>
+  <li>TAPformer（長期 IoT 負荷予測）、TSFormer（多時間軸 transformer）、および VTS 賞を受賞した注意機構付きハイブリッド CNN-BiLSTM。</li>
+  <li>スペクトル予測ラインを開始し、博士課程で Spec2Llama / Spec2LLM / LLM4Imp に発展。</li>
+  <li>IEEE VTC2024-Fall および ICUFN 2025 で第一著者口頭発表。</li>
+</ul>
+</div>
+</details>
+~~~
+
+== 産業経験
+
+=== フルスタック デベロッパー & AI --- *D'isum Inc.*
+/2024 年 9 月 -- 2025 年 6 月, 東京 · パートタイム/
+
+- *Sensor Data Pipeline Architect & Analyst* --- 生センサ データからのパイプライン構築。
+- *Sensor Data Specialist* --- アプリ開発、プロトタイピング、統合; 開発、アーキテクチャ／プロトタイプ、コア ソフトウェア統合のチーム協業を含む全範囲。
+- *Precision Sensor Data Engineer --- Analytics, ML Prototypes & System Fusion* --- ML／予測要素の組込み、プロトタイピング、新システムと既存システムの統合。
+
+=== インターンシップ --- *[https://www.jica.go.jp/index.html JICA（独立行政法人国際協力機構）]*
+/2024 年 7 月, 東京 --- 1 ヶ月/
+
+*実務向け生成 AI* に関する実践的入門: 発見、プロトタイピング、コンサルティング業務向け LLM 活用ソリューションの実演。産業クライアント向けの本番 GenAI システム構築への初の本格的な経験。
+
+=== TICAD9 ブース --- *[https://www.jica.go.jp/index.html JICA]* 代表
+/2025 年 8 月, 横浜/
+
+*第 9 回アフリカ開発会議（[https://www.jica.go.jp/index.html#section-our-work TICAD9]）* で JICA を支援するために再参加。JICA ブースを担当し、アフリカのエネルギー・インフラ分野向けの応用 ML および GenAI プロトタイプを、アフリカ各国代表団を含む国際的な来場者に紹介。
+
+== AI / バックエンド エンジニアリング --- 進行中
+
+- *EKKOU プラットフォーム* --- 専用 GPU バックエンド上のモデル提供を備えるフルスタック AI プラットフォーム開発。
+- *専用 GPU サーバのデプロイ* --- YuLab および工学プロジェクトでの一気通貫の所有: ハードウェア立ち上げ、CUDA／ドライバ インストール、コンテナ／CI、*sLM* および LLM 学習ジョブ、推論デプロイ、監視。
+
+~~~
+{}{raw}
+<details class="more"><summary>オープンソース AI / バックエンド成果</summary>
+<div class="more-body">
+<p>公開リポジトリは <a href="https://github.com/mesabo">github.com/mesabo</a>: 時系列予測（<em>hataformer</em>、<em>iTransformers</em>、<em>ForecastNet</em>）、NLP 生成（<em>GenerativeTextAI</em>）、エージェント アーキテクチャ（<em>AIOS-Agent</em>、<em>Energent-AI</em>）、ML デプロイ（<em>HousePricePredictionApi</em>）。完全なリストは <a href="other.html">その他</a>ページに。</p>
+</div>
+</details>
+~~~
+
+== フルスタック ソフトウェア エンジニアリング
+
+本番品質の Web（React + Node.js / Flask、REST および GraphQL、MongoDB）およびモバイル（Flutter / Dart）。40+ の公開リポジトリは [https://github.com/mesabo github.com/mesabo] に。
+
+~~~
+{}{raw}
+<details class="more"><summary>スタックと主要プロジェクト</summary>
+<div class="more-body">
+<ul>
+  <li><strong>Web:</strong> React フロントエンドが Flask または Node.js GraphQL バックエンドを利用; データ層は MongoDB および PostgreSQL。</li>
+  <li><strong>モバイル:</strong> Flutter / Dart アプリ &mdash; <em>crudium</em>&nbsp;⭐（Flutter スキャフォールディング ライブラリ）、<em>chronohouse</em>（時間管理）、<em>progistack_mobile</em>（生産性スタック）、<em>flutter_graphql_io</em>（GraphQL 統合）。</li>
+  <li><strong>DevOps:</strong> Docker ベース開発フロー（<em>debug_with_docker</em>）。</li>
+</ul>
+</div>
+</details>
+~~~
+
+== メンタリングと社会貢献
+
+- *Teaching Assistant ＆ Research Assistant* --- 法政大学 IIST 学科。教員の英語授業をサポート: 学部 4 年生の *Project-Based Learning（PBL）*、修士学生の *卒業研究*指導。
+- *ESATIC（コートジボワール TIC 高等学校）の学部生 15 名以上*のメンター; 5 名が日本および海外の大学院に進学。
+- *日本の高校 2 校*で AI とスマート エネルギー システムについて講義（200+ 名の生徒に到達）。
+- YuLab セミナーでの transformer アーキテクチャおよびスペクトル手法の発表。
+
+== サービス
+
+- レビュアー、/Theoretical Computer Science/（Elsevier）。
+- 査読委員、IEEE ICECET 2026（Rome、IEEE Italy Section）。
+
+== 履歴書 --- ダウンロード
+
+用途に合った版を選択してください:
+
+~~~
+{}{raw}
+<div class="cv-buttons">
+  <a href="/assets/cv/AI_EN.pdf" target="_blank" rel="noopener">
+    <strong>AI ＆ バックエンド エンジニア</strong>
+    <small>English &middot; PDF</small>
+  </a>
+  <a href="/assets/cv/AI_JA.pdf" target="_blank" rel="noopener">
+    <strong>AI ＆ バックエンド エンジニア</strong>
+    <small>日本語 &middot; PDF</small>
+  </a>
+  <a href="/assets/cv/SE_EN.pdf" target="_blank" rel="noopener">
+    <strong>フルスタック エンジニア</strong>
+    <small>English &middot; PDF</small>
+  </a>
+  <a href="/assets/cv/SE_JA.pdf" target="_blank" rel="noopener">
+    <strong>フルスタック エンジニア</strong>
+    <small>日本語 &middot; PDF</small>
+  </a>
+</div>
+~~~

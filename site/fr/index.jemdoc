@@ -1,0 +1,61 @@
+# jemdoc: menu{MENU}{index.html}, nofooter
+= À propos
+
+~~~
+{}{raw}
+<script>document.body.classList.add('page-index');</script>
+<div class="hero">
+  <img src="/assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
+  <div class="hero-text">
+    <h1 class="hero-name">Messou Franck Junior Aboya</h1>
+    <p class="title">Doctorant &middot; Informatique appliquée</p>
+    <p class="affiliation">
+      Graduate School of Science and Engineering &middot; <strong><a href="https://iist.hosei.ac.jp/2025/10/20/associate-professor-keping-yu-recognized-as-one-of-the-worlds-top-2-scientists-by-stanford-university-and-elsevier-2025-edition/" target="_blank" rel="noopener">YuLab</a></strong><br />
+      <a href="https://www.hosei.ac.jp" target="_blank" rel="noopener">Université Hosei</a> &middot;
+      <a href="https://iist.hosei.ac.jp" target="_blank" rel="noopener">Campus IIST de Koganei</a>, Tokyo
+    </p>
+    <div class="facet-tags">
+      <span>Chercheur</span>
+      <span>Ingénieur IA / Backend</span>
+      <span>Ingénieur Full-stack</span>
+    </div>
+  </div>
+</div>
+~~~
+
+Doctorant au YuLab, Graduate School of Science and Engineering (Informatique appliquée), Université Hosei, campus IIST de Koganei. Mes travaux développent des méthodes d'*intelligence artificielle*, de *petits / grands modèles de langage (sLM / LLM)* et d'*Internet des objets (IoT)* pour la stabilité et la résilience des *réseaux électriques intelligents* et des *systèmes IoT*: prévision de séries temporelles, reprogrammation spectrale, contrôle basé graphes. L'ensemble des entraînements et inférences tournent sur des serveurs multi-GPU dédiés que je provisionne et maintiens.
+
+En dehors de la recherche, je conçois des *systèmes IA / backend en production* et des *applications web et mobiles full-stack*, en collaboration avec des partenaires au Japon, dans le Golfe et en Afrique de l'Ouest.
+
+== Axes de recherche
+
+- IA / sLM / LLM pour la stabilité des systèmes électriques et la résilience des réseaux intelligents
+- Reprogrammation spectrale de *petits modèles de langage (sLM)* et de LLM gelés pour les séries temporelles
+- *IoT* et intelligence en périphérie pour les énergies réparties
+- Co-optimisation du dispatch énergétique et du routage de communication
+- Réseaux de neurones sur graphes appliqués aux topologies électriques
+- Apprentissage fédéré et distillation de connaissance sur dispositifs IoT-edge
+
+== Axes d'ingénierie
+
+- Pipelines ML en production (entraînement, inférence, déploiement) sur *serveurs GPU dédiés*
+- Ingestion *IoT* et déploiement de modèles en périphérie
+- Services backend en Python (Flask) et Node.js (REST et GraphQL)
+- Données: MongoDB et SQL
+- Web full-stack (React) et mobile (Flutter / Dart)
+
+== Faits marquants
+
+- *2 articles de revue Q1* en 2026 ([https://www.sciencedirect.com/journal/internet-of-things Internet of Things], IF 7.6 / [https://www.sciencedirect.com/journal/expert-systems-with-applications Expert Systems with Applications], IF 7.5) sur les séries temporelles *IoT* et la prévision basée *sLM*.
+- *5 articles en premier auteur* dans des conférences IEEE phares (VTC, ICUFN, ICCE, ICC).
+- *★ IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award* à la VTC2024-Fall, Washington D.C.
+- Reviewer pour /Theoretical Computer Science/ (Elsevier); membre du comité de lecture, IEEE ICECET 2026 (Rome, IEEE Italy Section).
+- Validation de la co-optimisation smart-grid sur des benchmarks jusqu'à *PEGASE 2 869 bus*, sur serveur GPU dédié.
+
+== Pour aller plus loin
+
+- [publications.html Publications] --- 2 revues Q1 + 8 conférences IEEE phares
+- [research.html Recherche] --- projet doctoral en cours + axe de reprogrammation spectrale
+- [experiences.html Expériences] --- parcours + CV téléchargeables (IA / SE, EN / JP)
+- [awards.html Distinctions] --- VTS 2024 Student Paper Award et nominations
+- [other.html Autres] --- projets open-source, mentorat, voyages et photos

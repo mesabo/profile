@@ -21,7 +21,7 @@ A unified co-optimization framework for smart-grid dispatch and communication ro
 
 ~~~
 {}{raw}
-<a class="inline-fig" href="assets/papers/smartgridcoopt_phd.pdf" target="_blank" rel="noopener"><img src="assets/papers/smartgridcoopt_phd.png" alt="Smart-grid co-optimization architecture" loading="lazy" /></a>
+<a class="inline-fig" href="/assets/phd/all.png" target="_blank" rel="noopener"><img src="/assets/phd/all.png" alt="Doctoral framework — overview of the three pillars" loading="lazy" /></a>
 ~~~
 
 === Three pillars
@@ -29,30 +29,33 @@ A unified co-optimization framework for smart-grid dispatch and communication ro
 . *Formal delay-stability coupling bounds.* Closed-form stability bounds where delay-margin coupling is *learned* per generator from operational data.
 ~~~
 {}{raw}
-<details class="more"><summary>Method &amp; validation</summary>
+<a class="inline-fig" href="/assets/phd/year1.png" target="_blank" rel="noopener"><img src="/assets/phd/year1.png" alt="Year 1 — formal delay-stability coupling bounds" loading="lazy" /></a>
+<details class="more"><summary>Method &amp; expected validation</summary>
 <div class="more-body">
 <p>Built on a <strong>dual-domain graph neural network</strong> operating jointly in the spectral domain (Laplacian eigenstructure of the grid) and the temporal domain (PMU time-series), producing per-generator coupling parameters whose physical interpretability is preserved by an additive decomposition.</p>
-<p><strong>Validation.</strong> Stability margin error below 5% against analytical baselines on IEEE 14, 30, 57, 118-bus benchmarks; runtime below 200 ms per evaluation on a single workstation GPU.</p>
+<p><strong>Expected validation targets.</strong> Stability margin error within 5% of analytical baselines on IEEE 14, 30, 57, 118-bus benchmarks; runtime under 200 ms per evaluation on a single workstation GPU.</p>
 </div>
 </details>
 ~~~
 . *Multi-impairment stability analysis.* Generalises the delay-only bound to compound impairments (delay + packet loss + jitter), each as a physically interpretable additive component.
 ~~~
 {}{raw}
-<details class="more"><summary>Method &amp; validation</summary>
+<a class="inline-fig" href="/assets/phd/year2.png" target="_blank" rel="noopener"><img src="/assets/phd/year2.png" alt="Year 2 — multi-impairment stability analysis" loading="lazy" /></a>
+<details class="more"><summary>Method &amp; expected validation</summary>
 <div class="more-body">
 <p>A margin-erosion decomposition maps each impairment to an additive component with learned per-generator weights, enabling per-component sensitivity analysis without losing physical interpretability.</p>
-<p><strong>Validation.</strong> Bound tightness under +/-20% impairment perturbation across 8 power-system benchmarks up to <strong>PEGASE 2,869-bus</strong>; full reproducibility on public OpenDSS and pandapower test cases.</p>
+<p><strong>Expected validation targets.</strong> Bound tightness under +/-20% impairment perturbation across 8 power-system benchmarks up to <strong>PEGASE 2,869-bus</strong>; full reproducibility on public OpenDSS and pandapower test cases.</p>
 </div>
 </details>
 ~~~
-. *SLM-based SCADA anomaly prediction.* Predicts impairment trajectories from SCADA / PMU streams and triggers preventive dispatch before stability margins are breached.
+. *SLM-based SCADA anomaly prediction.* Predicts impairment trajectories from SCADA / PMU streams to trigger preventive dispatch before stability margins are breached.
 ~~~
 {}{raw}
-<details class="more"><summary>Method &amp; validation</summary>
+<a class="inline-fig" href="/assets/phd/year3.png" target="_blank" rel="noopener"><img src="/assets/phd/year3.png" alt="Year 3 — sLM-based SCADA anomaly prediction" loading="lazy" /></a>
+<details class="more"><summary>Method &amp; expected validation</summary>
 <div class="more-body">
-<p>Built on the spectrally-reprogrammed <strong>small-language-model (sLM)</strong> pipeline of Spec2LLM and LLM4Imp, operating on tokenised PMU windows from IoT-edge gateways. A control loop couples the prediction to the dispatch optimiser of pillar&nbsp;1. Inference is colocated on the same dedicated GPU server as training, keeping latency under the 30&nbsp;s leading-time target.</p>
-<p><strong>Validation.</strong> Anomaly leading-time at least 30 s before the empirical instability threshold on real PMU field data, with false-alarm rate below 5%.</p>
+<p>Built on the spectrally-reprogrammed <strong>small-language-model (sLM)</strong> pipeline of Spec2LLM and LLM4Imp, operating on tokenised PMU windows from IoT-edge gateways. A control loop couples the prediction to the dispatch optimiser of pillar&nbsp;1. Inference is colocated on the same dedicated GPU server as training, with the aim of keeping latency under the 30&nbsp;s leading-time target.</p>
+<p><strong>Expected validation targets.</strong> Anomaly leading-time of at least 30 s before the empirical instability threshold on real PMU field data, with a false-alarm rate under 5%.</p>
 </div>
 </details>
 ~~~
@@ -84,49 +87,49 @@ A frozen language model --- *sLM* or LLM --- reprogrammed with frequency-domain 
 <div class="paper-grid">
 
   <article class="paper-card">
-    <a class="paper-fig" href="assets/papers/tapformer_iot_2026.pdf" target="_blank" rel="noopener" aria-label="Open TAPformer architecture in new tab"><img src="assets/papers/tapformer_iot_2026.png" alt="TAPformer architecture" loading="lazy" /></a>
+    <a class="paper-fig" href="/assets/papers/tapformer_iot_2026.pdf" target="_blank" rel="noopener" aria-label="Open TAPformer architecture in new tab"><img src="/assets/papers/tapformer_iot_2026.png" alt="TAPformer architecture" loading="lazy" /></a>
     <h3>TAPformer</h3>
     <p class="venue">Internet of Things (Elsevier) &middot; IF&nbsp;7.6, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.iot.2026.101895" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
     <p>Long-term <strong>IoT</strong> load forecasting with adaptive attention and temporal projection encoding for non-stationary streams. Trained and benchmarked on a dedicated GPU server.</p>
   </article>
 
   <article class="paper-card">
-    <a class="paper-fig" href="assets/papers/tsformer_icufn_2025.pdf" target="_blank" rel="noopener" aria-label="Open TSFormer architecture in new tab"><img src="assets/papers/tsformer_icufn_2025.png" alt="TSFormer architecture" loading="lazy" /></a>
+    <a class="paper-fig" href="/assets/papers/tsformer_icufn_2025.pdf" target="_blank" rel="noopener" aria-label="Open TSFormer architecture in new tab"><img src="/assets/papers/tsformer_icufn_2025.png" alt="TSFormer architecture" loading="lazy" /></a>
     <h3>TSFormer</h3>
     <p class="venue">ICUFN 2025 &middot; Lisbon &middot; <a href="https://ieeexplore.ieee.org/document/11170021" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
     <p>Multi-horizon temporal-aware transformer with learnable positional encodings, for non-stationary energy demand on <strong>IoT</strong> grids.</p>
   </article>
 
   <article class="paper-card">
-    <a class="paper-fig" href="assets/papers/multillm_vtc_2026.pdf" target="_blank" rel="noopener" aria-label="Open Graph-constrained multi-LLM ensembles in new tab"><img src="assets/papers/multillm_vtc_2026.png" alt="Graph-constrained multi-LLM ensembles" loading="lazy" /></a>
+    <a class="paper-fig" href="/assets/papers/multillm_vtc_2026.pdf" target="_blank" rel="noopener" aria-label="Open Graph-constrained multi-LLM ensembles in new tab"><img src="/assets/papers/multillm_vtc_2026.png" alt="Graph-constrained multi-LLM ensembles" loading="lazy" /></a>
     <h3>Graph-constrained multi-LLM ensembles</h3>
     <p class="venue">IEEE VTC2026-Spring &middot; Nice</p>
     <p>Ensemble of multiple LLMs (and <strong>sLM</strong> variants) over temporal <strong>IoT</strong> sensor networks, grounded in a structural causal model.</p>
   </article>
 
   <article class="paper-card">
-    <a class="paper-fig" href="assets/papers/spec2llama_eswa_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2Llama architecture in new tab"><img src="assets/papers/spec2llama_eswa_2026.png" alt="Spec2Llama architecture" loading="lazy" /></a>
+    <a class="paper-fig" href="/assets/papers/spec2llama_eswa_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2Llama architecture in new tab"><img src="/assets/papers/spec2llama_eswa_2026.png" alt="Spec2Llama architecture" loading="lazy" /></a>
     <h3>Spec2Llama</h3>
     <p class="venue">Expert Systems with Applications &middot; IF&nbsp;7.5, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.eswa.2026.131986" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
     <p>Spectral-aware forecasting that prompts a frozen Llama (used here as a backbone for <strong>sLM</strong>-scale variants) with frequency-domain tokens, generalising across heterogeneous time-series tasks including <strong>IoT</strong> streams.</p>
   </article>
 
   <article class="paper-card">
-    <a class="paper-fig" href="assets/papers/spec2llm_icce_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2LLM architecture in new tab"><img src="assets/papers/spec2llm_icce_2026.png" alt="Spec2LLM architecture" loading="lazy" /></a>
+    <a class="paper-fig" href="/assets/papers/spec2llm_icce_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2LLM architecture in new tab"><img src="/assets/papers/spec2llm_icce_2026.png" alt="Spec2LLM architecture" loading="lazy" /></a>
     <h3>Spec2LLM</h3>
     <p class="venue">IEEE ICCE 2026 &middot; Dubai &middot; <a href="https://ieeexplore.ieee.org/document/11449688" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
     <p>Spectral-to-language reprogramming for power-transformer temperature forecasting on <strong>IoT-instrumented</strong> grid equipment, with a small-language-model (<strong>sLM</strong>) deployment target.</p>
   </article>
 
   <article class="paper-card">
-    <a class="paper-fig" href="assets/papers/llm4imp_icc_2026.pdf" target="_blank" rel="noopener" aria-label="Open LLM4Imp architecture in new tab"><img src="assets/papers/llm4imp_icc_2026.png" alt="LLM4Imp architecture" loading="lazy" /></a>
+    <a class="paper-fig" href="/assets/papers/llm4imp_icc_2026.pdf" target="_blank" rel="noopener" aria-label="Open LLM4Imp architecture in new tab"><img src="/assets/papers/llm4imp_icc_2026.png" alt="LLM4Imp architecture" loading="lazy" /></a>
     <h3>LLM4Imp</h3>
     <p class="venue">IEEE ICC 2026 &middot; Glasgow</p>
     <p>Frozen LLMs (and lighter <strong>sLM</strong> backbones) guided by spectral prompts for time-series imputation on <strong>IoT</strong> data under heavy missing-data regimes.</p>
   </article>
 
   <article class="paper-card">
-    <a class="paper-fig" href="assets/papers/cnnbilstm_vtc_2024.pdf" target="_blank" rel="noopener" aria-label="Open CNN-BiLSTM hybrid in new tab"><img src="assets/papers/cnnbilstm_vtc_2024.png" alt="CNN-BiLSTM hybrid" loading="lazy" /></a>
+    <a class="paper-fig" href="/assets/papers/cnnbilstm_vtc_2024.pdf" target="_blank" rel="noopener" aria-label="Open CNN-BiLSTM hybrid in new tab"><img src="/assets/papers/cnnbilstm_vtc_2024.png" alt="CNN-BiLSTM hybrid" loading="lazy" /></a>
     <h3>Hybrid Attention CNN-BiLSTM <span class="award-pill">★ VTS 2024 Award</span></h3>
     <p class="venue">IEEE VTC2024-Fall &middot; Washington D.C. &middot; <a href="https://ieeexplore.ieee.org/document/10757868" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
     <p>Hybrid attention-based CNN-BiLSTM with data augmentation for short-term <strong>IoT</strong> load forecasting on dedicated GPU infrastructure. Awarded the IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award.</p>

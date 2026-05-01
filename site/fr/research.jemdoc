@@ -1,0 +1,150 @@
+# jemdoc: menu{MENU}{research.html}, nofooter
+= Recherche
+
+Je travaille à l'intersection de la *théorie du contrôle des systèmes électriques*, de l'*apprentissage profond* (réseaux de neurones sur graphes, *petits / grands modèles de langage --- sLM / LLM*), des *systèmes IoT* et de la *cybersécurité des réseaux électriques*. La majorité de mes travaux portent sur des problèmes de séries temporelles sur données énergétiques et IoT: prévision, imputation et détection d'anomalies. La validation va des benchmarks de référence aux données PMU réelles, l'ensemble s'exécutant sur des serveurs multi-GPU dédiés que je provisionne et maintiens de bout en bout.
+
+== Domaines de recherche
+
+- Méthodes IA / sLM / LLM pour la stabilité et la résilience des réseaux électriques intelligents
+- Reprogrammation spectrale de *petits modèles de langage (sLM)* et de LLM gelés pour les séries temporelles
+- *IoT* et intelligence en périphérie pour les énergies réparties
+- Co-conception réseau-multi-impairment (latence, perte de paquets, gigue)
+- Réseaux de neurones sur graphes appliqués aux topologies électriques
+- Apprentissage fédéré et distillation de connaissance sur dispositifs IoT-edge
+- Détection d'anomalies SCADA sur données PMU réelles
+- Représentations duales (spectrales + temporelles)
+- Infrastructure GPU dédiée: provisionnement, entraînement multi-GPU, déploiement d'inférence
+
+== Recherche actuelle --- *Co-optimisation smart-grid avec détection d'anomalies par LLM*
+
+Cadre unifié de co-optimisation du dispatch énergétique et du routage de communication, avec garanties formelles de stabilité et détection d'anomalies SCADA basée sur des *petits modèles de langage (sLM)*. Le réseau est traité comme un système *instrumenté IoT*: flux PMU, passerelles edge et endpoints SCADA sont des sources de données de premier ordre. Tous les entraînements et inférences tournent sur un serveur multi-GPU dédié au YuLab. Projet doctoral en cours (depuis 2025).
+
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/all.png" target="_blank" rel="noopener"><img src="/assets/phd/all.png" alt="Cadre doctoral — vue d'ensemble des trois piliers" loading="lazy" /></a>
+~~~
+
+=== Trois piliers
+
+. *Bornes formelles de couplage retard-stabilité.* Bornes de stabilité en forme close où le couplage marge-retard est *appris* par générateur à partir des données opérationnelles.
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/year1.png" target="_blank" rel="noopener"><img src="/assets/phd/year1.png" alt="Année 1 — bornes formelles de couplage retard-stabilité" loading="lazy" /></a>
+<details class="more"><summary>Méthode et validation attendue</summary>
+<div class="more-body">
+<p>Construit sur un <strong>réseau de neurones sur graphe à double domaine</strong> opérant conjointement dans le domaine spectral (structure propre du Laplacien du réseau) et dans le domaine temporel (séries PMU), produisant des paramètres de couplage par générateur dont l'interprétabilité physique est préservée par décomposition additive.</p>
+<p><strong>Cibles de validation attendues.</strong> Erreur de marge de stabilité visée à moins de 5 % vs. baselines analytiques sur les benchmarks IEEE 14, 30, 57, 118 bus; latence visée sous 200 ms par évaluation sur un GPU de station unique.</p>
+</div>
+</details>
+~~~
+. *Analyse de stabilité multi-impairment.* Généralise la borne retard-seul à des perturbations composées (latence + perte + gigue), chacune comme composante additive physiquement interprétable.
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/year2.png" target="_blank" rel="noopener"><img src="/assets/phd/year2.png" alt="Année 2 — analyse de stabilité multi-impairment" loading="lazy" /></a>
+<details class="more"><summary>Méthode et validation attendue</summary>
+<div class="more-body">
+<p>Une décomposition d'érosion de marge associe à chaque perturbation une composante additive avec poids appris par générateur, permettant une analyse de sensibilité par composante sans perdre l'interprétabilité physique.</p>
+<p><strong>Cibles de validation attendues.</strong> Tightness de borne sous perturbation +/-20 % visée sur 8 benchmarks électriques jusqu'à <strong>PEGASE 2 869 bus</strong>; reproductibilité complète sur OpenDSS et pandapower.</p>
+</div>
+</details>
+~~~
+. *Prédiction d'anomalies SCADA basée sLM.* Prédit les trajectoires de perturbation à partir des flux SCADA / PMU pour déclencher un dispatch préventif avant que les marges de stabilité ne soient franchies.
+~~~
+{}{raw}
+<a class="inline-fig" href="/assets/phd/year3.png" target="_blank" rel="noopener"><img src="/assets/phd/year3.png" alt="Année 3 — prédiction d'anomalies SCADA basée sLM" loading="lazy" /></a>
+<details class="more"><summary>Méthode et validation attendue</summary>
+<div class="more-body">
+<p>Construit sur le pipeline <strong>petit modèle de langage (sLM)</strong> reprogrammé spectralement de Spec2LLM et LLM4Imp, opérant sur des fenêtres PMU tokenisées issues de passerelles IoT-edge. Une boucle de contrôle relie la prédiction à l'optimiseur de dispatch du pilier&nbsp;1. L'inférence est colocalisée sur le même serveur GPU dédié que l'entraînement, avec pour objectif une latence sous 30&nbsp;s d'avance.</p>
+<p><strong>Cibles de validation attendues.</strong> Avance de prédiction visée à au moins 30 s avant le seuil empirique d'instabilité sur données PMU réelles, taux de fausse alarme visé sous 5 %.</p>
+</div>
+</details>
+~~~
+
+== Axe secondaire --- *Reprogrammation spectrale des modèles de langage pour séries temporelles*
+
+Un modèle de langage gelé --- *sLM* ou LLM --- reprogrammé via des prompts en domaine fréquentiel, généralise les tâches de prévision, imputation et détection d'anomalies sur des séries énergétiques et *IoT* sans affinage par tâche. L'entraînement tourne sur serveurs GPU dédiés; les variantes *sLM* sont conçues pour un déploiement d'inférence proche des passerelles IoT-edge.
+
+- *Spec2Llama* --- /Expert Systems with Applications/, IF 7.5, JCR Q1, 2026.
+- *Spec2LLM* --- IEEE ICCE 2026, Dubaï.
+- *LLM4Imp* --- IEEE ICC 2026, Glasgow.
+
+~~~
+{}{raw}
+<details class="more"><summary>Évolution du pipeline</summary>
+<div class="more-body">
+<p><strong>Spec2Llama</strong> a introduit la prévision spectrale: les tokens de séries sont projetés en représentation fréquentielle apprise pour amorcer un Llama gelé, permettant une analyse polyvalente sans affinage.</p>
+<p><strong>Spec2LLM</strong> applique la même idée à la prévision de température des transformateurs de puissance, avec un couplage spectral-langage plus serré.</p>
+<p><strong>LLM4Imp</strong> étend le pipeline à l'imputation de séries en régime de données fortement manquantes (longs trous, échantillonnage irrégulier).</p>
+<p>Ce pipeline est le fondement du pilier 3 du projet doctoral (détection d'anomalies SCADA par sLM).</p>
+</div>
+</details>
+~~~
+
+== Autres projets
+
+~~~
+{}{raw}
+<div class="paper-grid">
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/tapformer_iot_2026.pdf" target="_blank" rel="noopener" aria-label="Architecture TAPformer"><img src="/assets/papers/tapformer_iot_2026.png" alt="Architecture TAPformer" loading="lazy" /></a>
+    <h3>TAPformer</h3>
+    <p class="venue">Internet of Things (Elsevier) &middot; IF&nbsp;7.6, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.iot.2026.101895" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
+    <p>Prévision long-terme de charge <strong>IoT</strong> avec attention adaptative et encodage de projection temporelle pour flux non stationnaires. Entraîné sur serveur GPU dédié.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/tsformer_icufn_2025.pdf" target="_blank" rel="noopener" aria-label="Architecture TSFormer"><img src="/assets/papers/tsformer_icufn_2025.png" alt="Architecture TSFormer" loading="lazy" /></a>
+    <h3>TSFormer</h3>
+    <p class="venue">ICUFN 2025 &middot; Lisbonne &middot; <a href="https://ieeexplore.ieee.org/document/11170021" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>Transformer multi-horizon avec encodages positionnels appris, pour la demande énergétique non stationnaire sur réseaux <strong>IoT</strong>.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/multillm_vtc_2026.pdf" target="_blank" rel="noopener" aria-label="Multi-LLM ensembles"><img src="/assets/papers/multillm_vtc_2026.png" alt="Multi-LLM ensembles" loading="lazy" /></a>
+    <h3>Ensembles multi-LLM contraints par graphe</h3>
+    <p class="venue">IEEE VTC2026-Spring &middot; Nice</p>
+    <p>Ensemble de LLM (et variantes <strong>sLM</strong>) sur réseaux de capteurs <strong>IoT</strong> temporels, fondé sur un modèle causal structurel.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/spec2llama_eswa_2026.pdf" target="_blank" rel="noopener" aria-label="Architecture Spec2Llama"><img src="/assets/papers/spec2llama_eswa_2026.png" alt="Architecture Spec2Llama" loading="lazy" /></a>
+    <h3>Spec2Llama</h3>
+    <p class="venue">Expert Systems with Applications &middot; IF&nbsp;7.5, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.eswa.2026.131986" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
+    <p>Prévision spectrale amorçant un Llama gelé (utilisé comme backbone <strong>sLM</strong>) avec des tokens fréquentiels, généralisant à des séries temporelles hétérogènes incluant des flux <strong>IoT</strong>.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/spec2llm_icce_2026.pdf" target="_blank" rel="noopener" aria-label="Architecture Spec2LLM"><img src="/assets/papers/spec2llm_icce_2026.png" alt="Architecture Spec2LLM" loading="lazy" /></a>
+    <h3>Spec2LLM</h3>
+    <p class="venue">IEEE ICCE 2026 &middot; Dubaï &middot; <a href="https://ieeexplore.ieee.org/document/11449688" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>Reprogrammation spectrale-vers-langage pour la prévision de température des transformateurs sur équipements de réseau <strong>IoT</strong>, avec cible de déploiement <strong>sLM</strong>.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/llm4imp_icc_2026.pdf" target="_blank" rel="noopener" aria-label="Architecture LLM4Imp"><img src="/assets/papers/llm4imp_icc_2026.png" alt="Architecture LLM4Imp" loading="lazy" /></a>
+    <h3>LLM4Imp</h3>
+    <p class="venue">IEEE ICC 2026 &middot; Glasgow</p>
+    <p>LLM gelés (et backbones <strong>sLM</strong> plus légers) guidés par prompts spectraux pour l'imputation de séries <strong>IoT</strong> en régime fortement lacunaire.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/papers/cnnbilstm_vtc_2024.pdf" target="_blank" rel="noopener" aria-label="CNN-BiLSTM hybrid"><img src="/assets/papers/cnnbilstm_vtc_2024.png" alt="CNN-BiLSTM hybrid" loading="lazy" /></a>
+    <h3>CNN-BiLSTM avec attention hybride <span class="award-pill">★ VTS 2024 Award</span></h3>
+    <p class="venue">IEEE VTC2024-Fall &middot; Washington D.C. &middot; <a href="https://ieeexplore.ieee.org/document/10757868" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
+    <p>CNN-BiLSTM hybride à attention avec data augmentation pour la prévision court-terme de charge <strong>IoT</strong> sur infrastructure GPU dédiée. IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award.</p>
+  </article>
+
+</div>
+~~~
+
+== Plan DC2 (avril 2027 -- mars 2029)
+
+- *Année 1.* Pilier 1 --- bornes formelles de couplage; validation IEEE 14/30/57/118; soumission IEEE Trans. Smart Grid; conférence IEEE ICC ou GLOBECOM.
+- *Année 2.* Piliers 2 et 3 --- extension multi-impairment sur PEGASE 2 869 bus; SCADA basé sLM sur données PMU réelles; soumissions /Applied Energy/ et IEEE Trans. Power Systems; finalisation de la thèse.
+
+== Impact et perspectives
+
+Mes travaux doctoraux relient trois communautés traditionnellement séparées --- théorie du contrôle des systèmes électriques, apprentissage profond et cybersécurité des réseaux --- et visent à amorcer un *pont de recherche Japon / Côte d'Ivoire* sur la résilience des réseaux intelligents pour les économies émergentes.
+
+Pour la liste complète des publications, voir [publications.html publications].

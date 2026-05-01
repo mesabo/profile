@@ -1,0 +1,34 @@
+# jemdoc: menu{MENU}{awards.html}, nofooter
+= Distinctions
+
+~~~
+{}{raw}
+<div class="paper-grid">
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/awards/vtc2024_award.pdf" target="_blank" rel="noopener" aria-label="Certificat IEEE VTS 2024 Student Paper Award"><img src="/assets/awards/vtc2024_award.png" alt="Certificat IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award" loading="lazy" /></a>
+    <h3>IEEE VTS Tokyo/Japan Chapter — Student Paper Award &amp; Encouragement Award <span class="award-pill">2024</span></h3>
+    <p class="venue">VTC2024-Fall &middot; Washington D.C., USA &middot; Octobre 2024</p>
+    <p>Décerné pour l'article <em>Enhancing Short-Term Load Forecasting in IoT: A Hybrid Attention-based CNN-BiLSTM with Data Augmentation</em>, en reconnaissance de travaux étudiants exceptionnels en apprentissage machine appliqué à l'IoT et aux systèmes énergétiques.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/awards/jica_development_studies_program_2025.pdf" target="_blank" rel="noopener" aria-label="Certificat JICA Development Studies Program 2025"><img src="/assets/awards/jica_development_studies_program_2025.png" alt="Certificat JICA Development Studies Program 2025" loading="lazy" /></a>
+    <h3>JICA Development Studies Program (JICA専用講座) <span class="award-pill">2025</span></h3>
+    <p class="venue"><a href="https://www.jica.go.jp/french/index.html" target="_blank" rel="noopener">Agence japonaise de coopération internationale (JICA)</a> &middot; 2025</p>
+    <p>Achèvement du cours dédié JICA en études du développement, axé sur le transfert de technologie et les infrastructures durables pour économies émergentes.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="/assets/awards/icecet_reviewer_certificate_2026.pdf" target="_blank" rel="noopener" aria-label="Certificat reviewer IEEE ICECET 2026"><img src="/assets/awards/icecet_reviewer_certificate_2026.png" alt="Certificat reviewer IEEE ICECET 2026" loading="lazy" /></a>
+    <h3>Reviewer — IEEE ICECET 2026 <span class="award-pill">2026</span></h3>
+    <p class="venue">IEEE International Conference on Electrical, Computer and Energy Technologies &middot; Rome, Italie &middot; Juillet 2026</p>
+    <p>Membre du comité de lecture, nommé par IEEE Italy Section.</p>
+  </article>
+
+</div>
+~~~
+
+== Autres missions de service
+
+- Reviewer, /Theoretical Computer Science/ (Elsevier) --- relecture pour une revue de référence en informatique théorique (ISSN 0304-3975).

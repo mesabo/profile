@@ -1,67 +1,67 @@
 # jemdoc: menu{MENU}{other.html}, nofooter
-= Other
+= その他
 
-== Open-source projects
+== オープンソース プロジェクト
 
-40+ public repositories at [https://github.com/mesabo github.com/mesabo], organised across three tracks. Click any group to see the projects.
+40+ の公開リポジトリは [https://github.com/mesabo github.com/mesabo]、3 つのトラックに分類しています。各グループをクリックしてプロジェクトを確認できます。
 
 ~~~
 {}{raw}
-<details class="more facet-research"><summary>Research code &mdash; 6 repos</summary>
+<details class="more facet-research"><summary>研究コード &mdash; 6 リポジトリ</summary>
 <div class="more-body">
 <ul>
-  <li><strong>smartgrid-coopt</strong> &mdash; unified co-optimization framework for smart-grid dispatch and communication routing (PhD work-in-progress).</li>
-  <li><strong>hataformer</strong> &mdash; Hybrid Local + Global Attention for energy forecasting.</li>
-  <li><strong>iTransformers</strong> &mdash; inverted-transformer experiments for time-series.</li>
-  <li><strong>ForecastNet</strong> &mdash; multi-step forecasting backbone.</li>
-  <li><strong>ML-Time-Series-Forecasting</strong> &mdash; collected baselines and ablations.</li>
-  <li><strong>STLF-IoT</strong> &mdash; short-term load forecasting for IoT environments.</li>
+  <li><strong>smartgrid-coopt</strong> &mdash; スマートグリッド ディスパッチと通信ルーティングの統合協調最適化フレームワーク（博士課程作業中）。</li>
+  <li><strong>hataformer</strong> &mdash; エネルギー予測向けハイブリッド ローカル + グローバル注意機構。</li>
+  <li><strong>iTransformers</strong> &mdash; 時系列向け倒置 transformer 実験。</li>
+  <li><strong>ForecastNet</strong> &mdash; マルチ ステップ予測バックボーン。</li>
+  <li><strong>ML-Time-Series-Forecasting</strong> &mdash; ベースラインとアブレーションをまとめたリポジトリ。</li>
+  <li><strong>STLF-IoT</strong> &mdash; IoT 環境向け短期負荷予測。</li>
 </ul>
 </div>
 </details>
 
-<details class="more facet-engineer"><summary>AI / backend engineering &mdash; 5 repos</summary>
+<details class="more facet-engineer"><summary>AI / バックエンド エンジニアリング &mdash; 5 リポジトリ</summary>
 <div class="more-body">
 <ul>
-  <li><strong>Energent-AI</strong> &mdash; agent system for energy-domain reasoning.</li>
-  <li><strong>AIOS-Agent</strong> &mdash; agent-OS-style orchestration prototype.</li>
-  <li><strong>GenerativeTextAI</strong> &mdash; NLP generation experiments.</li>
-  <li><strong>HousePricePredictionApi</strong> &mdash; end-to-end ML inference service.</li>
-  <li><strong>baseline_ai</strong> &mdash; reusable ML training utilities and notebook scaffolding.</li>
+  <li><strong>Energent-AI</strong> &mdash; エネルギー領域推論のためのエージェント システム。</li>
+  <li><strong>AIOS-Agent</strong> &mdash; agent-OS 風オーケストレーション プロトタイプ。</li>
+  <li><strong>GenerativeTextAI</strong> &mdash; NLP 生成の実験。</li>
+  <li><strong>HousePricePredictionApi</strong> &mdash; エンドツーエンドの ML 推論サービス。</li>
+  <li><strong>baseline_ai</strong> &mdash; 再利用可能な ML 学習ユーティリティとノートブック スキャフォールディング。</li>
 </ul>
 </div>
 </details>
 
-<details class="more facet-fullstack"><summary>Full-stack &amp; mobile &mdash; 6 repos</summary>
+<details class="more facet-fullstack"><summary>フルスタック ＆ モバイル &mdash; 6 リポジトリ</summary>
 <div class="more-body">
 <ul>
-  <li><strong>crudium</strong> (Dart) &nbsp;⭐&nbsp; &mdash; Flutter scaffolding library.</li>
-  <li><strong>chronohouse</strong> (Dart) &mdash; time-tracking mobile app.</li>
-  <li><strong>progistack_mobile</strong> (Dart) &mdash; mobile productivity stack.</li>
-  <li><strong>flutter_graphql_io</strong> &mdash; Flutter + GraphQL integration sample.</li>
-  <li><strong>flask_crud</strong> + <strong>react_crud</strong> &mdash; Flask backend + React frontend CRUD reference.</li>
-  <li><strong>nodejs_graphql_mongodb</strong> &mdash; Node + GraphQL + MongoDB backend pattern.</li>
+  <li><strong>crudium</strong>（Dart）&nbsp;⭐&nbsp; &mdash; Flutter スキャフォールディング ライブラリ。</li>
+  <li><strong>chronohouse</strong>（Dart）&mdash; 時間管理モバイル アプリ。</li>
+  <li><strong>progistack_mobile</strong>（Dart）&mdash; モバイル生産性スタック。</li>
+  <li><strong>flutter_graphql_io</strong> &mdash; Flutter + GraphQL 統合サンプル。</li>
+  <li><strong>flask_crud</strong> + <strong>react_crud</strong> &mdash; Flask バックエンド + React フロントエンドの CRUD リファレンス。</li>
+  <li><strong>nodejs_graphql_mongodb</strong> &mdash; Node + GraphQL + MongoDB バックエンド パターン。</li>
 </ul>
 </div>
 </details>
 ~~~
 
-== Outreach and impact
+== 社会貢献と影響
 
-- *Mentorship* --- 15+ undergraduate students at ESATIC (École Supérieure Africaine des TIC, Côte d'Ivoire); 5 admitted to graduate programs in Japan and abroad.
-- *Volunteer lecturer* --- invited talks at 2 Japanese high schools on AI and smart energy systems (200+ students reached).
-- *TICAD9 exhibition* --- represented [https://www.jica.go.jp/english/index.html JICA (Japan International Cooperation Agency)] at the booth of the 9th Tokyo International Conference on African Development; demonstrated Generative AI prototypes for African energy and infrastructure use cases.
-- *Japan / Côte d'Ivoire research bridge* --- long-term plan to seed smart-grid resilience capacity in West Africa.
+- *メンタリング* --- ESATIC（コートジボワール TIC 高等学校）の学部生 15 名以上; 5 名が日本および海外の大学院に進学。
+- *ボランティア講師* --- 日本の高校 2 校で AI とスマート エネルギー システムに関する招待講義（200+ 名の生徒に到達）。
+- *TICAD9 ブース* --- 第 9 回アフリカ開発会議のブースで [https://www.jica.go.jp/index.html JICA（独立行政法人国際協力機構）] を代表; アフリカのエネルギー・インフラ用途向け生成 AI プロトタイプを実演。
+- *日本／コートジボワール 研究架橋* --- 西アフリカでスマートグリッド耐障害性の能力を育てる長期計画。
 
-== Personal
+== パーソナル
 
-- Based in Tokyo since 2023; originally from Côte d'Ivoire.
-- Languages: French (native), English (fluent), Japanese (intermediate, ongoing study).
-- Interests: smart-energy systems for emerging-economy grids, mentoring early-career engineers, building things that ship.
+- 2023 年から東京在住、コートジボワール出身。
+- 言語: フランス語（母語）、英語（流暢）、日本語（中級、学習継続中）。
+- 関心: 新興経済圏向けスマート エネルギー システム、若手エンジニアのメンタリング、出荷されるものを作ること。
 
-== Travels & conferences
+== 出張・会議
 
-Conference and event galleries, chronological, most recent first. Each strip scrolls horizontally.
+会議とイベントの写真ギャラリー（時系列順、最新が先）。各列は横スクロールで表示されます。
 
 ~~~
 {}{raw}
@@ -130,9 +130,9 @@ Conference and event galleries, chronological, most recent first. Each strip scr
 <!-- GALLERY-AUTO-END -->
 ~~~
 
-== Hobbies
+== 趣味
 
-Tokyo life off the keyboard --- food, music, walks, games.
+キーボードを離れた東京生活 --- 食事、音楽、散歩、ゲーム。
 
 ~~~
 {}{raw}
@@ -150,9 +150,3 @@ Tokyo life off the keyboard --- food, music, walks, games.
 </section>
 <!-- HOBBIES-AUTO-END -->
 ~~~
-
-- 花見 (sakura) season in Tokyo.
-- Shinjuku at night --- favourite walk after long lab days.
-- Japanese cuisine, picked up a few homemade staples.
-- Playing the *balafon* from Burkina Faso (West-African xylophone).
-- Video games and indie game design.

@@ -5,7 +5,7 @@
 {}{raw}
 <script>document.body.classList.add('page-index');</script>
 <div class="hero">
-  <img src="assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
+  <img src="/assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
   <div class="hero-text">
     <h1 class="hero-name">Messou Franck Junior Aboya</h1>
     <p class="title">PhD candidate &middot; Applied Informatics</p>
