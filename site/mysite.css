@@ -24,6 +24,92 @@
   --accent-3-strong: #804009;
 }
 
+/* === Dark theme — soft warm slate, not black === */
+html[data-theme="dark"] {
+  --ink: #ebebf1;
+  --soft: #9c9caa;
+  --rule: #353641;
+  --rule-soft: #2a2b35;
+  --bg: #1c1d24;
+  --card: #25262f;
+
+  --accent: #a684ee;
+  --accent-soft: #2e2547;
+  --accent-strong: #c4a8ff;
+
+  --accent-2: #5fb6c4;
+  --accent-2-soft: #1f3a3f;
+  --accent-2-strong: #8fd0db;
+
+  --accent-3: #e08c50;
+  --accent-3-soft: #3a2918;
+  --accent-3-strong: #f0b07a;
+}
+
+/* gentler shadows + borders in dark */
+html[data-theme="dark"] .paper-card { box-shadow: none; }
+html[data-theme="dark"] .paper-card:hover {
+  box-shadow: 0 1px 10px rgba(166, 132, 238, 0.12);
+}
+html[data-theme="dark"] .paper-card .paper-fig {
+  background: var(--rule-soft);
+}
+html[data-theme="dark"] .paper-card .paper-fig img,
+html[data-theme="dark"] a.inline-fig img {
+  filter: brightness(0.92);
+}
+html[data-theme="dark"] a.inline-fig {
+  background: var(--rule-soft);
+}
+/* hero avatar gets a slightly muted ring in dark */
+html[data-theme="dark"] .hero img.avatar {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+/* mobile sticky nav background */
+html[data-theme="dark"] #layout-menu {
+  background: rgba(28, 29, 36, 0.85);
+}
+
+/* === Theme toggle button (fixed top-right on every page) === */
+#theme-toggle {
+  position: fixed;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 30;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.18s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+#theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: scale(1.05);
+}
+#theme-toggle .theme-icon-light,
+#theme-toggle .theme-icon-dark {
+  display: none;
+}
+html[data-theme="light"] #theme-toggle .theme-icon-dark,
+html:not([data-theme="dark"]) #theme-toggle .theme-icon-dark {
+  display: inline;
+}
+html[data-theme="dark"] #theme-toggle .theme-icon-light {
+  display: inline;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 * { box-sizing: border-box; }
