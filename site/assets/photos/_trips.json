@@ -1,0 +1,46 @@
+{
+  "trips": [
+    {
+      "dir": "icce2026",
+      "title": "IEEE ICCE 2026 — Dubai, UAE",
+      "date": "February 2026",
+      "section": "travels"
+    },
+    {
+      "dir": "ticad2025",
+      "title": "TICAD9 — Yokohama, Japan",
+      "date": "August 2025",
+      "section": "travels"
+    },
+    {
+      "dir": "icufn2025",
+      "title": "ICUFN 2025 — Lisbon, Portugal",
+      "date": "June 2025",
+      "section": "travels"
+    },
+    {
+      "dir": "graduation",
+      "title": "Master’s graduation — Hosei University, Tokyo",
+      "date": "March 2025",
+      "section": "travels"
+    },
+    {
+      "dir": "vtc2024",
+      "title": "IEEE VTC2024-Fall — Washington D.C., USA",
+      "date": "October 2024",
+      "section": "travels"
+    },
+    {
+      "dir": "jica_event",
+      "title": "JICA international-understanding event — Igusa High School",
+      "date": "2025",
+      "section": "travels"
+    },
+    {
+      "dir": "hobbies",
+      "title": null,
+      "date": null,
+      "section": "hobbies"
+    }
+  ]
+}

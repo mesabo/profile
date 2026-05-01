@@ -1,0 +1,18 @@
+# Build output (deployed via site/Makefile to mesabo/mesabo.github.io)
+site/build/
+
+# Auto-generated paper thumbnails (regenerated from .pdf during build)
+site/assets/papers/*.png
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc

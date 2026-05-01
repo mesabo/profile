@@ -1,0 +1,56 @@
+# jemdoc: menu{MENU}{index.html}, nofooter
+= About me
+
+~~~
+{}{raw}
+<script>document.body.classList.add('page-index');</script>
+<div class="hero">
+  <img src="assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
+  <div class="hero-text">
+    <h1 class="hero-name">Messou Franck Junior Aboya</h1>
+    <p class="title">PhD candidate &middot; Hosei University, Tokyo &middot; YuLab</p>
+    <div class="facet-tags">
+      <span>Researcher</span>
+      <span>AI / Backend Engineer</span>
+      <span>Full-stack Engineer</span>
+    </div>
+  </div>
+</div>
+~~~
+
+I am a doctoral researcher at the YuLab, Graduate School of Computer and Information Sciences, Hosei University. My work develops *AI*, *small / large language model (sLM / LLM)*, and *IoT* methods for the stability and resilience of *smart grids* and *IoT systems*, with a focus on time-series forecasting, spectral reprogramming, and graph-based control. All experiments run on dedicated multi-GPU servers I provision and maintain.
+
+Outside research, I build production *AI / backend systems* and *full-stack web and mobile applications*, and work with partners across Japan, the Gulf, and West Africa.
+
+== Research focus
+
+- AI / sLM / LLM for power-system stability and grid resilience
+- Spectral reprogramming of frozen *small language models (sLM)* and LLMs for time-series tasks
+- *IoT* and edge intelligence for distributed energy resources
+- Co-optimization of energy dispatch and communication routing
+- Graph neural networks over electrical-grid topologies
+- Federated learning, knowledge distillation across IoT-edge devices
+
+== Engineering focus
+
+- Production ML pipelines (training, inference, deployment) on *dedicated GPU servers*
+- *IoT* data ingestion and edge model deployment
+- Backend services in Python (Flask) and Node.js, with REST and GraphQL
+- Data layers in MongoDB and SQL
+- Full-stack web (React) and mobile (Flutter / Dart)
+
+== Highlights
+
+- *2 Q1 journal papers* in 2026 ([https://www.sciencedirect.com/journal/internet-of-things Internet of Things], IF 7.6 / [https://www.sciencedirect.com/journal/expert-systems-with-applications Expert Systems with Applications], IF 7.5) on *IoT* time-series and *sLM*-based forecasting.
+- *5 first-authored* IEEE flagship conference papers (VTC, ICUFN, ICCE, ICC).
+- *★ IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award* at VTC2024-Fall, Washington D.C.
+- Reviewer for /Theoretical Computer Science/ (Elsevier); Review Committee Member, IEEE ICECET 2026.
+- Validation of smart-grid co-optimization on benchmarks up to *2,869-bus PEGASE*, all on a dedicated GPU server.
+
+== Where to go next
+
+- [publications.html Publications] --- 2 Q1 journals + 8 IEEE flagship conferences
+- [research.html Research] --- current PhD project + spectral-reprogramming track
+- [experiences.html Experiences] --- career + downloadable CVs (AI / SE, EN / JP)
+- [awards.html Awards] --- VTS 2024 Student Paper Award and service appointments
+- [other.html Other] --- open-source projects, mentorship, travels and photos

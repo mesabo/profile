@@ -1,0 +1,158 @@
+# jemdoc: menu{MENU}{other.html}, nofooter
+= Other
+
+== Open-source projects
+
+40+ public repositories at [https://github.com/mesabo github.com/mesabo], organised across three tracks. Click any group to see the projects.
+
+~~~
+{}{raw}
+<details class="more"><summary>Research code &mdash; 6 repos</summary>
+<div class="more-body">
+<ul>
+  <li><strong>smartgrid-coopt</strong> &mdash; unified co-optimization framework for smart-grid dispatch and communication routing (PhD work-in-progress).</li>
+  <li><strong>hataformer</strong> &mdash; Hybrid Local + Global Attention for energy forecasting.</li>
+  <li><strong>iTransformers</strong> &mdash; inverted-transformer experiments for time-series.</li>
+  <li><strong>ForecastNet</strong> &mdash; multi-step forecasting backbone.</li>
+  <li><strong>ML-Time-Series-Forecasting</strong> &mdash; collected baselines and ablations.</li>
+  <li><strong>STLF-IoT</strong> &mdash; short-term load forecasting for IoT environments.</li>
+</ul>
+</div>
+</details>
+
+<details class="more"><summary>AI / backend engineering &mdash; 5 repos</summary>
+<div class="more-body">
+<ul>
+  <li><strong>Energent-AI</strong> &mdash; agent system for energy-domain reasoning.</li>
+  <li><strong>AIOS-Agent</strong> &mdash; agent-OS-style orchestration prototype.</li>
+  <li><strong>GenerativeTextAI</strong> &mdash; NLP generation experiments.</li>
+  <li><strong>HousePricePredictionApi</strong> &mdash; end-to-end ML inference service.</li>
+  <li><strong>baseline_ai</strong> &mdash; reusable ML training utilities and notebook scaffolding.</li>
+</ul>
+</div>
+</details>
+
+<details class="more"><summary>Full-stack &amp; mobile &mdash; 6 repos</summary>
+<div class="more-body">
+<ul>
+  <li><strong>crudium</strong> (Dart) &nbsp;⭐&nbsp; &mdash; Flutter scaffolding library.</li>
+  <li><strong>chronohouse</strong> (Dart) &mdash; time-tracking mobile app.</li>
+  <li><strong>progistack_mobile</strong> (Dart) &mdash; mobile productivity stack.</li>
+  <li><strong>flutter_graphql_io</strong> &mdash; Flutter + GraphQL integration sample.</li>
+  <li><strong>flask_crud</strong> + <strong>react_crud</strong> &mdash; Flask backend + React frontend CRUD reference.</li>
+  <li><strong>nodejs_graphql_mongodb</strong> &mdash; Node + GraphQL + MongoDB backend pattern.</li>
+</ul>
+</div>
+</details>
+~~~
+
+== Outreach and impact
+
+- *Mentorship* --- 15+ undergraduate students at ESATIC (École Supérieure Africaine des TIC, Côte d'Ivoire); 5 admitted to graduate programs in Japan and abroad.
+- *Volunteer lecturer* --- invited talks at 2 Japanese high schools on AI and smart energy systems (200+ students reached).
+- *TICAD9 exhibition* --- Japan AI consulting exhibition at the 9th Tokyo International Conference on African Development.
+- *Japan / Côte d'Ivoire research bridge* --- long-term plan to seed smart-grid resilience capacity in West Africa.
+
+== Personal
+
+- Based in Tokyo since 2023; originally from Côte d'Ivoire.
+- Languages: French (native), English (fluent), Japanese (intermediate, ongoing study).
+- Interests: smart-energy systems for emerging-economy grids, mentoring early-career engineers, building things that ship.
+
+== Travels & conferences
+
+Conference and event galleries, chronological, most recent first. Each strip scrolls horizontally.
+
+~~~
+{}{raw}
+<!-- GALLERY-AUTO-START -->
+<section class="trip">
+  <h3>IEEE ICCE 2026 — Dubai, UAE <span class="trip-date">February 2026</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="assets/photos/icce2026/01.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icce2026/01.jpeg" alt="icce2026 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/icce2026/02.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icce2026/02.jpeg" alt="icce2026 — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/icce2026/03.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icce2026/03.jpeg" alt="icce2026 — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/icce2026/04.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icce2026/04.jpeg" alt="icce2026 — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/icce2026/05.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icce2026/05.jpeg" alt="icce2026 — 5" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/icce2026/06.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icce2026/06.jpeg" alt="icce2026 — 6" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>TICAD9 — Yokohama, Japan <span class="trip-date">August 2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="assets/photos/ticad2025/02_previous_japan_pm.jpeg" target="_blank" rel="noopener"><img src="assets/photos/ticad2025/02_previous_japan_pm.jpeg" alt="ticad2025 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/ticad2025/02_ticad_entrance.jpeg" target="_blank" rel="noopener"><img src="assets/photos/ticad2025/02_ticad_entrance.jpeg" alt="ticad2025 — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/ticad2025/03_booth.jpeg" target="_blank" rel="noopener"><img src="assets/photos/ticad2025/03_booth.jpeg" alt="ticad2025 — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/ticad2025/04_ivorycoast_commerce_chamber_representative.jpeg" target="_blank" rel="noopener"><img src="assets/photos/ticad2025/04_ivorycoast_commerce_chamber_representative.jpeg" alt="ticad2025 — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/ticad2025/05_dinner.jpeg" target="_blank" rel="noopener"><img src="assets/photos/ticad2025/05_dinner.jpeg" alt="ticad2025 — 5" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>ICUFN 2025 — Lisbon, Portugal <span class="trip-date">June 2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="assets/photos/icufn2025/01.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icufn2025/01.jpeg" alt="icufn2025 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/icufn2025/02.jpeg" target="_blank" rel="noopener"><img src="assets/photos/icufn2025/02.jpeg" alt="icufn2025 — 2" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>Master’s graduation — Hosei University, Tokyo <span class="trip-date">March 2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="assets/photos/graduation/01.jpeg" target="_blank" rel="noopener"><img src="assets/photos/graduation/01.jpeg" alt="graduation — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/graduation/02.jpeg" target="_blank" rel="noopener"><img src="assets/photos/graduation/02.jpeg" alt="graduation — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/graduation/03.jpeg" target="_blank" rel="noopener"><img src="assets/photos/graduation/03.jpeg" alt="graduation — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/graduation/04.jpeg" target="_blank" rel="noopener"><img src="assets/photos/graduation/04.jpeg" alt="graduation — 4" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>IEEE VTC2024-Fall — Washington D.C., USA <span class="trip-date">October 2024</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="assets/photos/vtc2024/01.jpeg" target="_blank" rel="noopener"><img src="assets/photos/vtc2024/01.jpeg" alt="vtc2024 — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/vtc2024/02.jpeg" target="_blank" rel="noopener"><img src="assets/photos/vtc2024/02.jpeg" alt="vtc2024 — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/vtc2024/03.jpeg" target="_blank" rel="noopener"><img src="assets/photos/vtc2024/03.jpeg" alt="vtc2024 — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/vtc2024/04.jpeg" target="_blank" rel="noopener"><img src="assets/photos/vtc2024/04.jpeg" alt="vtc2024 — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/vtc2024/05.jpeg" target="_blank" rel="noopener"><img src="assets/photos/vtc2024/05.jpeg" alt="vtc2024 — 5" loading="lazy" /></a>
+  </div>
+</section>
+
+<section class="trip">
+  <h3>JICA international-understanding event — Igusa High School <span class="trip-date">2025</span></h3>
+  <div class="trip-grid">
+    <a class="trip-photo" href="assets/photos/jica_event/international_understanding_at_ighusa_high_scho1.jpeg" target="_blank" rel="noopener"><img src="assets/photos/jica_event/international_understanding_at_ighusa_high_scho1.jpeg" alt="jica event — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/jica_event/international_understanding_at_ighusa_high_scho2.jpeg" target="_blank" rel="noopener"><img src="assets/photos/jica_event/international_understanding_at_ighusa_high_scho2.jpeg" alt="jica event — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/jica_event/jica_networking_fair_2024.jpeg" target="_blank" rel="noopener"><img src="assets/photos/jica_event/jica_networking_fair_2024.jpeg" alt="jica event — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/jica_event/jica_networking_fair_2025.png" target="_blank" rel="noopener"><img src="assets/photos/jica_event/jica_networking_fair_2025.png" alt="jica event — 4" loading="lazy" /></a>
+  </div>
+</section>
+<!-- GALLERY-AUTO-END -->
+~~~
+
+== Hobbies
+
+Tokyo life off the keyboard --- food, music, walks, games.
+
+~~~
+{}{raw}
+<!-- HOBBIES-AUTO-START -->
+<section class="trip">
+  <div class="trip-grid">
+    <a class="trip-photo" href="assets/photos/hobbies/japanese_cuisine1.jpeg" target="_blank" rel="noopener"><img src="assets/photos/hobbies/japanese_cuisine1.jpeg" alt="hobbies — 1" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/hobbies/japanese_cuisine2.jpeg" target="_blank" rel="noopener"><img src="assets/photos/hobbies/japanese_cuisine2.jpeg" alt="hobbies — 2" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/hobbies/osaka_nara_park.jpeg" target="_blank" rel="noopener"><img src="assets/photos/hobbies/osaka_nara_park.jpeg" alt="hobbies — 3" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/hobbies/playing_burkina_faso_balafon.jpeg" target="_blank" rel="noopener"><img src="assets/photos/hobbies/playing_burkina_faso_balafon.jpeg" alt="hobbies — 4" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/hobbies/sakura.jpeg" target="_blank" rel="noopener"><img src="assets/photos/hobbies/sakura.jpeg" alt="hobbies — 5" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/hobbies/shinjuku.jpeg" target="_blank" rel="noopener"><img src="assets/photos/hobbies/shinjuku.jpeg" alt="hobbies — 6" loading="lazy" /></a>
+    <a class="trip-photo" href="assets/photos/hobbies/video_game.jpeg" target="_blank" rel="noopener"><img src="assets/photos/hobbies/video_game.jpeg" alt="hobbies — 7" loading="lazy" /></a>
+  </div>
+</section>
+<!-- HOBBIES-AUTO-END -->
+~~~
+
+- 花見 (sakura) season in Tokyo.
+- Shinjuku at night --- favourite walk after long lab days.
+- Japanese cuisine, picked up a few homemade staples.
+- Playing the *balafon* from Burkina Faso (West-African xylophone).
+- Video games and indie game design.

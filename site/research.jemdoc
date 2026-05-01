@@ -1,0 +1,148 @@
+# jemdoc: menu{MENU}{research.html}, nofooter
+= Research
+
+I work at the intersection of *power-system control theory*, *deep learning* (graph neural networks, *small / large language models --- sLM / LLM*), *IoT systems*, and *grid cybersecurity*. Most of my output focuses on time-series problems on energy and IoT data: forecasting, imputation, and anomaly detection. Validation scales from textbook benchmarks to real PMU field data, with all training and inference run on dedicated multi-GPU servers I configure and maintain end-to-end.
+
+== Research areas
+
+- AI / sLM / LLM methods for power-system stability and smart-grid resilience
+- Spectral reprogramming of frozen *small language models (sLM)* and LLMs for time-series tasks
+- IoT and edge intelligence for distributed energy resources
+- Multi-impairment communication-network co-design (delay, packet loss, jitter)
+- Graph neural networks over electrical-grid topologies
+- Federated learning and knowledge distillation across IoT-edge devices
+- SCADA anomaly detection on real PMU field data
+- Dual-domain (spectral + temporal) representation learning
+- Dedicated GPU-server infrastructure: cluster provisioning, multi-GPU training, inference deployment
+
+== Recent research --- *Smart-grid co-optimization with LLM-driven anomaly detection*
+
+A unified co-optimization framework for smart-grid dispatch and communication routing with formal stability guarantees and *small-language-model (sLM)* based SCADA anomaly detection. The framework treats the grid as an *IoT-instrumented* system: PMU streams, edge gateways, and SCADA endpoints are first-class data sources. All training and inference run on a dedicated multi-GPU server in the YuLab. This is the active doctoral project (2025 onwards).
+
+~~~
+{}{raw}
+<a class="inline-fig" href="assets/papers/smartgridcoopt_phd.pdf" target="_blank" rel="noopener"><img src="assets/papers/smartgridcoopt_phd.png" alt="Smart-grid co-optimization architecture" loading="lazy" /></a>
+~~~
+
+=== Three pillars
+
+. *Formal delay-stability coupling bounds.* Closed-form stability bounds where delay-margin coupling is *learned* per generator from operational data.
+~~~
+{}{raw}
+<details class="more"><summary>Method &amp; validation</summary>
+<div class="more-body">
+<p>Built on a <strong>dual-domain graph neural network</strong> operating jointly in the spectral domain (Laplacian eigenstructure of the grid) and the temporal domain (PMU time-series), producing per-generator coupling parameters whose physical interpretability is preserved by an additive decomposition.</p>
+<p><strong>Validation.</strong> Stability margin error below 5% against analytical baselines on IEEE 14, 30, 57, 118-bus benchmarks; runtime below 200 ms per evaluation on a single workstation GPU.</p>
+</div>
+</details>
+~~~
+. *Multi-impairment stability analysis.* Generalises the delay-only bound to compound impairments (delay + packet loss + jitter), each as a physically interpretable additive component.
+~~~
+{}{raw}
+<details class="more"><summary>Method &amp; validation</summary>
+<div class="more-body">
+<p>A margin-erosion decomposition maps each impairment to an additive component with learned per-generator weights, enabling per-component sensitivity analysis without losing physical interpretability.</p>
+<p><strong>Validation.</strong> Bound tightness under +/-20% impairment perturbation across 8 power-system benchmarks up to <strong>PEGASE 2,869-bus</strong>; full reproducibility on public OpenDSS and pandapower test cases.</p>
+</div>
+</details>
+~~~
+. *SLM-based SCADA anomaly prediction.* Predicts impairment trajectories from SCADA / PMU streams and triggers preventive dispatch before stability margins are breached.
+~~~
+{}{raw}
+<details class="more"><summary>Method &amp; validation</summary>
+<div class="more-body">
+<p>Built on the spectrally-reprogrammed <strong>small-language-model (sLM)</strong> pipeline of Spec2LLM and LLM4Imp, operating on tokenised PMU windows from IoT-edge gateways. A control loop couples the prediction to the dispatch optimiser of pillar&nbsp;1. Inference is colocated on the same dedicated GPU server as training, keeping latency under the 30&nbsp;s leading-time target.</p>
+<p><strong>Validation.</strong> Anomaly leading-time at least 30 s before the empirical instability threshold on real PMU field data, with false-alarm rate below 5%.</p>
+</div>
+</details>
+~~~
+
+== Secondary track --- *Spectral reprogramming of language models for time-series*
+
+A frozen language model --- *sLM* or LLM --- reprogrammed with frequency-domain prompts, generalises across forecasting, imputation and anomaly tasks on energy and *IoT time-series* without per-task fine-tuning. Training runs on dedicated GPU servers; the *sLM* variants are explicitly designed so inference can be deployed close to IoT-edge gateways.
+
+- *Spec2Llama* --- /Expert Systems with Applications/, IF 7.5, JCR Q1, 2026.
+- *Spec2LLM* --- IEEE ICCE 2026, Dubai.
+- *LLM4Imp* --- IEEE ICC 2026, Glasgow.
+
+~~~
+{}{raw}
+<details class="more"><summary>How the pipeline evolved</summary>
+<div class="more-body">
+<p><strong>Spec2Llama</strong> introduced the spectral-aware forecasting frame: time-series tokens are projected into a learned frequency representation that prompts a frozen Llama backbone, enabling versatile time-series analysis across heterogeneous datasets without per-task fine-tuning.</p>
+<p><strong>Spec2LLM</strong> applied the same idea to power-transformer temperature forecasting, with a tighter spectral-to-language token coupling and validation on grid-equipment monitoring data.</p>
+<p><strong>LLM4Imp</strong> extended the pipeline to time-series imputation under heavy missing-data regimes (long gaps, irregular sampling) by reformulating imputation as a frequency-domain prompt completion task.</p>
+<p>This pipeline is the foundation for pillar 3 of the doctoral project (SLM-based SCADA anomaly prediction).</p>
+</div>
+</details>
+~~~
+
+== Other featured projects
+
+~~~
+{}{raw}
+<div class="paper-grid">
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/papers/tapformer_iot_2026.pdf" target="_blank" rel="noopener" aria-label="Open TAPformer architecture in new tab"><img src="assets/papers/tapformer_iot_2026.png" alt="TAPformer architecture" loading="lazy" /></a>
+    <h3>TAPformer</h3>
+    <p class="venue">Internet of Things (Elsevier) &middot; IF&nbsp;7.6, Q1 &middot; 2026</p>
+    <p>Long-term <strong>IoT</strong> load forecasting with adaptive attention and temporal projection encoding for non-stationary streams. Trained and benchmarked on a dedicated GPU server.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/papers/tsformer_icufn_2025.pdf" target="_blank" rel="noopener" aria-label="Open TSFormer architecture in new tab"><img src="assets/papers/tsformer_icufn_2025.png" alt="TSFormer architecture" loading="lazy" /></a>
+    <h3>TSFormer</h3>
+    <p class="venue">ICUFN 2025 &middot; Lisbon</p>
+    <p>Multi-horizon temporal-aware transformer with learnable positional encodings, for non-stationary energy demand on <strong>IoT</strong> grids.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/papers/multillm_vtc_2026.pdf" target="_blank" rel="noopener" aria-label="Open Graph-constrained multi-LLM ensembles in new tab"><img src="assets/papers/multillm_vtc_2026.png" alt="Graph-constrained multi-LLM ensembles" loading="lazy" /></a>
+    <h3>Graph-constrained multi-LLM ensembles</h3>
+    <p class="venue">IEEE VTC2026-Spring &middot; Nice</p>
+    <p>Ensemble of multiple LLMs (and <strong>sLM</strong> variants) over temporal <strong>IoT</strong> sensor networks, grounded in a structural causal model.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/papers/spec2llama_eswa_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2Llama architecture in new tab"><img src="assets/papers/spec2llama_eswa_2026.png" alt="Spec2Llama architecture" loading="lazy" /></a>
+    <h3>Spec2Llama</h3>
+    <p class="venue">Expert Systems with Applications &middot; IF&nbsp;7.5, Q1 &middot; 2026</p>
+    <p>Spectral-aware forecasting that prompts a frozen Llama (used here as a backbone for <strong>sLM</strong>-scale variants) with frequency-domain tokens, generalising across heterogeneous time-series tasks including <strong>IoT</strong> streams.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/papers/spec2llm_icce_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2LLM architecture in new tab"><img src="assets/papers/spec2llm_icce_2026.png" alt="Spec2LLM architecture" loading="lazy" /></a>
+    <h3>Spec2LLM</h3>
+    <p class="venue">IEEE ICCE 2026 &middot; Dubai</p>
+    <p>Spectral-to-language reprogramming for power-transformer temperature forecasting on <strong>IoT-instrumented</strong> grid equipment, with a small-language-model (<strong>sLM</strong>) deployment target.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/papers/llm4imp_icc_2026.pdf" target="_blank" rel="noopener" aria-label="Open LLM4Imp architecture in new tab"><img src="assets/papers/llm4imp_icc_2026.png" alt="LLM4Imp architecture" loading="lazy" /></a>
+    <h3>LLM4Imp</h3>
+    <p class="venue">IEEE ICC 2026 &middot; Glasgow</p>
+    <p>Frozen LLMs (and lighter <strong>sLM</strong> backbones) guided by spectral prompts for time-series imputation on <strong>IoT</strong> data under heavy missing-data regimes.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/papers/cnnbilstm_vtc_2024.pdf" target="_blank" rel="noopener" aria-label="Open CNN-BiLSTM hybrid in new tab"><img src="assets/papers/cnnbilstm_vtc_2024.png" alt="CNN-BiLSTM hybrid" loading="lazy" /></a>
+    <h3>Hybrid Attention CNN-BiLSTM <span class="award-pill">★ VTS 2024 Award</span></h3>
+    <p class="venue">IEEE VTC2024-Fall &middot; Washington D.C.</p>
+    <p>Hybrid attention-based CNN-BiLSTM with data augmentation for short-term <strong>IoT</strong> load forecasting on dedicated GPU infrastructure. Awarded the IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award.</p>
+  </article>
+
+</div>
+~~~
+
+
+== Two-year DC2 plan (April 2027 -- March 2029)
+
+- *Year 1.* Pillar 1 --- formal coupling bounds; validation on IEEE 14/30/57/118; submission to IEEE Trans. Smart Grid; conference paper at IEEE ICC or GLOBECOM.
+- *Year 2.* Pillars 2 and 3 --- multi-impairment extension on PEGASE 2,869-bus; SLM-based SCADA on real PMU data; submissions to /Applied Energy/ and IEEE Trans. Power Systems; dissertation finalisation.
+
+== Impact and outlook
+
+The doctoral work bridges three traditionally separate communities --- power-system control theory, deep learning, and grid cybersecurity --- and is intended to seed a *Japan / Côte d'Ivoire research bridge* on smart-grid resilience for emerging-economy grids.
+
+For the full publication record, see [publications.html publications].

@@ -1,0 +1,127 @@
+# jemdoc: menu{MENU}{experiences.html}, nofooter
+= Experiences
+
+== Education
+
+=== PhD (博士課程), Applied Informatics --- Hosei University, Tokyo
+/2025 -- 2028 (expected)/
+
+Graduate School of Computer and Information Sciences, *YuLab*. Doctoral research on *AI / sLM / LLM* methods for smart-grid stability, multi-impairment analysis, and SCADA anomaly detection on *IoT-instrumented* power systems. All training and inference run on dedicated multi-GPU servers I configure, maintain, and scale. Advisor: Prof. Keping Yu.
+
+=== MSc, Applied Informatics --- Hosei University, Tokyo
+/2023 -- 2025/
+
+Master's research on transformer-based forecasting for IoT energy systems (TAPformer, TSFormer, CNN-BiLSTM hybrid). VTC2024-Fall paper awarded the IEEE VTS Tokyo/Japan Chapter Student Paper Award.
+
+== Research experience
+
+=== Doctoral researcher --- YuLab, Hosei University
+/2025 -- present, Tokyo/
+
+First-authored *2 Q1 journal papers* and *5 IEEE flagship conference papers* on *IoT* energy systems and *sLM*-based forecasting / anomaly detection. Building a unified co-optimization framework for smart-grid stability with formal bounds and *sLM*-based SCADA anomaly prediction, all running on a dedicated multi-GPU server in the YuLab.
+~~~
+{}{raw}
+<details class="more"><summary>What I do day to day</summary>
+<div class="more-body">
+<ul>
+  <li>Design dual-domain graph-neural-network architectures for power-system stability at scale (up to 2,869 buses, PEGASE benchmark).</li>
+  <li>Develop the spectral-to-language reprogramming pipeline (Spec2Llama, Spec2LLM, LLM4Imp) targeting both LLM and <strong>small-language-model (sLM)</strong> backbones for <strong>IoT</strong>-edge-friendly deployment.</li>
+  <li>Provision and operate a <strong>dedicated multi-GPU server</strong> for the lab: CUDA / PyTorch environment, distributed training jobs, model checkpointing, inference services.</li>
+  <li>Lead international collaborations with King Saud University (Profs. Tolba, Alfarraj), Mohamed Bin Zayed University of AI (Prof. Guizani), University of British Columbia (Prof. Leung).</li>
+  <li>Mentor incoming Master's students in the YuLab on transformer architectures, spectral methods, and GPU-cluster workflows.</li>
+</ul>
+</div>
+</details>
+~~~
+
+=== Master's researcher --- YuLab, Hosei University
+/2023 -- 2025, Tokyo/
+
+Foundational work on attention-based transformers for *IoT* load forecasting and edge intelligence. Set up the lab GPU-server training pipeline that the doctoral work now extends. The Master's-period VTC2024-Fall paper won the *IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award*.
+~~~
+{}{raw}
+<details class="more"><summary>What I built during the Master's</summary>
+<div class="more-body">
+<ul>
+  <li>TAPformer (long-term IoT load forecasting), TSFormer (multi-horizon transformer), and the hybrid attention-based CNN-BiLSTM that won the VTS award.</li>
+  <li>Spectral-aware forecasting line of work begun, later evolving into Spec2Llama / Spec2LLM / LLM4Imp during the doctoral course.</li>
+  <li>First-author oral presentations at IEEE VTC2024-Fall and ICUFN 2025.</li>
+</ul>
+</div>
+</details>
+~~~
+
+== AI / backend engineering
+
+=== Production AI consulting --- TICAD9 exhibition
+/2025, Yokohama/
+
+Contributed to a Japan AI consulting exhibition at the *9th Tokyo International Conference on African Development (TICAD9)*. Demonstrations of applied ML systems aimed at African energy and infrastructure use cases.
+
+=== AI / backend roles
+- *D'Isum / SASEye* --- backend services and ML pipelines for the SASEye observation platform; *IoT* data ingestion and dashboard APIs.
+- *EKKOU platform* --- full-stack AI platform development with model serving on dedicated GPU back-ends.
+- *Dedicated GPU-server deployment* --- across YuLab and engineering side-projects, end-to-end ownership: hardware bring-up, CUDA / driver install, container and CI setup, *sLM* and LLM training jobs, inference deployment, monitoring.
+
+~~~
+{}{raw}
+<details class="more"><summary>Open-source AI / backend work</summary>
+<div class="more-body">
+<p>Public repos at <a href="https://github.com/mesabo">github.com/mesabo</a> covering time-series forecasting (<em>hataformer</em>, <em>iTransformers</em>, <em>ForecastNet</em>), NLP generation (<em>GenerativeTextAI</em>), agent architectures (<em>AIOS-Agent</em>, <em>Energent-AI</em>), and ML deployment (<em>HousePricePredictionApi</em>). Full list on the <a href="other.html">Other</a> page.</p>
+</div>
+</details>
+~~~
+
+== Full-stack software engineering
+
+Production-grade web (React + Node.js / Flask, REST and GraphQL, MongoDB) and mobile (Flutter / Dart). 40+ public repositories at [https://github.com/mesabo github.com/mesabo].
+
+~~~
+{}{raw}
+<details class="more"><summary>Stack &amp; selected projects</summary>
+<div class="more-body">
+<ul>
+  <li><strong>Web:</strong> React frontends consuming Flask or Node.js GraphQL backends; MongoDB and PostgreSQL on the data layer.</li>
+  <li><strong>Mobile:</strong> Flutter / Dart applications &mdash; <em>crudium</em>&nbsp;⭐ (Flutter scaffolding library), <em>chronohouse</em> (time-tracking), <em>progistack_mobile</em> (productivity stack), <em>flutter_graphql_io</em> (GraphQL integration).</li>
+  <li><strong>DevOps:</strong> Docker-based development workflows (<em>debug_with_docker</em>).</li>
+</ul>
+</div>
+</details>
+~~~
+
+== Mentorship and outreach
+
+- Mentor for *15+ undergraduate students at ESATIC* (École Supérieure Africaine des TIC, Côte d'Ivoire); 5 admitted to graduate programs in Japan and abroad.
+- Volunteer lecturer at *2 Japanese high schools* on AI and smart energy systems (200+ students reached).
+- YuLab seminar presenter on transformer architectures and spectral methods.
+
+== Service
+
+- Reviewer, /Theoretical Computer Science/ (Elsevier).
+- Review Committee Member, IEEE ICECET 2026 (Rome, IEEE Italy Section).
+
+== Curriculum vitae --- downloads
+
+Choose the variant that matches your audience:
+
+~~~
+{}{raw}
+<div class="cv-buttons">
+  <a href="assets/cv/AI_EN.pdf" target="_blank" rel="noopener">
+    <strong>AI &amp; Backend Engineer</strong>
+    <small>English &middot; PDF</small>
+  </a>
+  <a href="assets/cv/AI_JA.pdf" target="_blank" rel="noopener">
+    <strong>AI &amp; Backend Engineer</strong>
+    <small>日本語 &middot; PDF</small>
+  </a>
+  <a href="assets/cv/SE_EN.pdf" target="_blank" rel="noopener">
+    <strong>Full-stack Software Engineer</strong>
+    <small>English &middot; PDF</small>
+  </a>
+  <a href="assets/cv/SE_JA.pdf" target="_blank" rel="noopener">
+    <strong>Full-stack Software Engineer</strong>
+    <small>日本語 &middot; PDF</small>
+  </a>
+</div>
+~~~

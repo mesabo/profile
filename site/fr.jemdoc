@@ -1,0 +1,13 @@
+# jemdoc: menu{MENU}{fr.html}, nofooter
+= Bientôt disponible
+
+~~~
+{}{raw}
+<div class="lang-stub">
+  <p class="lang-stub-flag">🇫🇷</p>
+  <h2 style="border:none; text-transform:none; font-family:'Crimson Pro', serif; font-size:1.4rem; letter-spacing:0; color:var(--ink); margin:0 0 0.6rem; padding:0;">Version française en préparation</h2>
+  <p>Ce profil est actuellement disponible en anglais. La traduction française et japonaise sera publiée prochainement.</p>
+  <p>En attendant, le contenu complet est accessible sur la <a href="index.html">version anglaise</a>.</p>
+  <p class="lang-stub-back"><a href="index.html">&larr; Retour à l'accueil (English)</a></p>
+</div>
+~~~
