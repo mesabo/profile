@@ -8,7 +8,12 @@
   <img src="assets/photo.png" alt="Messou Franck Junior Aboya" class="avatar" />
   <div class="hero-text">
     <h1 class="hero-name">Messou Franck Junior Aboya</h1>
-    <p class="title">PhD candidate &middot; Hosei University, Tokyo &middot; YuLab</p>
+    <p class="title">PhD candidate &middot; Applied Informatics</p>
+    <p class="affiliation">
+      Graduate School of Science and Engineering &middot; <strong>YuLab</strong><br />
+      <a href="https://www.hosei.ac.jp" target="_blank" rel="noopener">Hosei University</a> &middot;
+      <a href="https://iist.hosei.ac.jp" target="_blank" rel="noopener">IIST Koganei Campus</a>, Tokyo
+    </p>
     <div class="facet-tags">
       <span>Researcher</span>
       <span>AI / Backend Engineer</span>
@@ -18,7 +23,7 @@
 </div>
 ~~~
 
-I am a doctoral researcher at the YuLab, Graduate School of Computer and Information Sciences, Hosei University. My work develops *AI*, *small / large language model (sLM / LLM)*, and *IoT* methods for the stability and resilience of *smart grids* and *IoT systems*, with a focus on time-series forecasting, spectral reprogramming, and graph-based control. All experiments run on dedicated multi-GPU servers I provision and maintain.
+I am a doctoral researcher at the YuLab, Graduate School of Science and Engineering (Applied Informatics), Hosei University, IIST Koganei Campus. My work develops *AI*, *small / large language model (sLM / LLM)*, and *IoT* methods for the stability and resilience of *smart grids* and *IoT systems*, with a focus on time-series forecasting, spectral reprogramming, and graph-based control. All experiments run on dedicated multi-GPU servers I provision and maintain.
 
 Outside research, I build production *AI / backend systems* and *full-stack web and mobile applications*, and work with partners across Japan, the Gulf, and West Africa.
 
