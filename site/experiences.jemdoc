@@ -51,15 +51,20 @@ Foundational work on attention-based transformers for *IoT* load forecasting and
 </details>
 ~~~
 
-== AI / backend engineering
+== Industry experience
 
-=== Production AI consulting --- TICAD9 exhibition
-/2025, Yokohama/
+=== Part-time engineer --- *D'isum Inc.*
+/Tokyo --- ongoing/
 
-Contributed to a Japan AI consulting exhibition at the *9th Tokyo International Conference on African Development (TICAD9)*. Demonstrations of applied ML systems aimed at African energy and infrastructure use cases.
+Backend services and ML pipelines for the *SASEye* observation platform: *IoT* data ingestion, dashboard APIs, model serving on dedicated GPU back-ends. Day-to-day work on production AI / backend systems running alongside the doctoral research.
 
-=== AI / backend roles
-- *D'Isum / SASEye* --- backend services and ML pipelines for the SASEye observation platform; *IoT* data ingestion and dashboard APIs.
+=== Internship --- *[https://j-aic.com Japan AI Consulting (J-AIC)]*
+/1 month, 2025, Tokyo / Yokohama/
+
+Hands-on introduction to *Generative AI applied to real-world business problems*: discovery, prototyping, and demonstrating LLM-powered solutions for the consulting practice. Contributed to the *J-AIC booth at the 9th Tokyo International Conference on African Development ([https://www.jica.go.jp/english/ticad TICAD9])* in Yokohama, where I showcased applied ML for African energy and infrastructure use cases.
+
+== AI / backend engineering --- ongoing
+
 - *EKKOU platform* --- full-stack AI platform development with model serving on dedicated GPU back-ends.
 - *Dedicated GPU-server deployment* --- across YuLab and engineering side-projects, end-to-end ownership: hardware bring-up, CUDA / driver install, container and CI setup, *sLM* and LLM training jobs, inference deployment, monitoring.
 
