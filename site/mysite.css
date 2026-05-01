@@ -5,11 +5,23 @@
   --soft: #5a5a66;
   --rule: #e6e6ec;
   --rule-soft: #f0f0f6;
+  --bg: #fafafb;
+  --card: #ffffff;
+
+  /* primary — research / academic */
   --accent: #6f3bd0;
   --accent-soft: #f0eaff;
   --accent-strong: #4f2399;
-  --bg: #fafafb;
-  --card: #ffffff;
+
+  /* secondary — engineering / IoT / GPU */
+  --accent-2: #15889a;
+  --accent-2-soft: #e3f3f6;
+  --accent-2-strong: #0d5e6c;
+
+  /* tertiary — awards / recognition */
+  --accent-3: #b35e10;
+  --accent-3-soft: #fbecd9;
+  --accent-3-strong: #804009;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
@@ -145,6 +157,17 @@ h2 {
   padding-bottom: 0.5rem;
   margin: 2.8rem 0 1.2rem;
   border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 2px;
 }
 
 h3 {
@@ -266,9 +289,22 @@ strong, b { color: var(--ink); font-weight: 600; }
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 0.22rem 0.65rem;
+  border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent-strong);
-  border-radius: 999px;
+}
+/* one colour per identity — three muted hues, not loud */
+.hero .facet-tags span:nth-child(1) {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+.hero .facet-tags span:nth-child(2) {
+  background: var(--accent-2-soft);
+  color: var(--accent-2-strong);
+}
+.hero .facet-tags span:nth-child(3) {
+  background: var(--accent-3-soft);
+  color: var(--accent-3-strong);
 }
 
 .hero p { margin: 0.6rem 0; }
@@ -494,8 +530,8 @@ strong, b { color: var(--ink); font-weight: 600; }
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 0.15rem 0.5rem;
-  background: var(--accent-soft);
-  color: var(--accent-strong);
+  background: var(--accent-3-soft);
+  color: var(--accent-3-strong);
   border-radius: 999px;
   font-style: normal;
 }
@@ -583,6 +619,13 @@ details.more > summary {
   padding: 0.2rem 0;
   list-style: none;
 }
+/* facet-coloured variants — keep palette consistent with hero tags */
+details.more.facet-research > summary  { color: var(--accent); }
+details.more.facet-engineer > summary  { color: var(--accent-2-strong); }
+details.more.facet-fullstack > summary { color: var(--accent-3-strong); }
+details.more.facet-research[open]      { border-left-color: var(--accent); }
+details.more.facet-engineer[open]      { border-left-color: var(--accent-2); }
+details.more.facet-fullstack[open]     { border-left-color: var(--accent-3); }
 details.more > summary::-webkit-details-marker,
 details.more > summary::marker { display: none; }
 details.more > summary::before {

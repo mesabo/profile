@@ -7,7 +7,7 @@
 
 ~~~
 {}{raw}
-<details class="more"><summary>Research code &mdash; 6 repos</summary>
+<details class="more facet-research"><summary>Research code &mdash; 6 repos</summary>
 <div class="more-body">
 <ul>
   <li><strong>smartgrid-coopt</strong> &mdash; unified co-optimization framework for smart-grid dispatch and communication routing (PhD work-in-progress).</li>
@@ -20,7 +20,7 @@
 </div>
 </details>
 
-<details class="more"><summary>AI / backend engineering &mdash; 5 repos</summary>
+<details class="more facet-engineer"><summary>AI / backend engineering &mdash; 5 repos</summary>
 <div class="more-body">
 <ul>
   <li><strong>Energent-AI</strong> &mdash; agent system for energy-domain reasoning.</li>
@@ -32,7 +32,7 @@
 </div>
 </details>
 
-<details class="more"><summary>Full-stack &amp; mobile &mdash; 6 repos</summary>
+<details class="more facet-fullstack"><summary>Full-stack &amp; mobile &mdash; 6 repos</summary>
 <div class="more-body">
 <ul>
   <li><strong>crudium</strong> (Dart) &nbsp;⭐&nbsp; &mdash; Flutter scaffolding library.</li>
