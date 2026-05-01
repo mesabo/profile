@@ -17,7 +17,10 @@ REMOTE := https://github.com/mesabo/mesabo.github.io.git
 
 all: build
 
-build: gallery $(BUILD) $(HTMLS) $(BUILD)/mysite.css $(BUILD)/jemdoc-default.css $(BUILD)/assets
+build: gallery $(BUILD) $(HTMLS) $(BUILD)/mysite.css $(BUILD)/jemdoc-default.css $(BUILD)/assets $(BUILD)/README.md
+
+$(BUILD)/README.md: deploy_README.md
+	cp deploy_README.md $(BUILD)/README.md
 
 # regenerate the photo gallery in other.jemdoc from assets/photos/*
 .PHONY: gallery
