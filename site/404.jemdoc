@@ -1,0 +1,16 @@
+# jemdoc: nofooter
+= 404 — page not found
+
+~~~
+{}{raw}
+<div class="lang-stub" style="margin-top: 4rem;">
+  <p class="lang-stub-flag">🚧</p>
+  <h2 style="border:none; text-transform:none; font-family:'Crimson Pro', serif; font-size:1.4rem; letter-spacing:0; color:var(--ink); margin:0 0 0.6rem; padding:0;">This page does not exist</h2>
+  <p>The URL you followed is broken or moved. Try one of the entry points below.</p>
+  <p class="lang-stub-back">
+    <a href="/index.html">🇬🇧 English home</a> &nbsp;·&nbsp;
+    <a href="/fr/index.html">🇫🇷 Accueil</a> &nbsp;·&nbsp;
+    <a href="/ja/index.html">🇯🇵 ホーム</a>
+  </p>
+</div>
+~~~

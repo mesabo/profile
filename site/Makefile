@@ -21,10 +21,36 @@ REMOTE := https://github.com/mesabo/mesabo.github.io.git
 
 all: build
 
-build: gallery $(BUILD) $(HTMLS) $(BUILD)/mysite.css $(BUILD)/jemdoc-default.css $(BUILD)/assets $(BUILD)/README.md
+build: gallery $(BUILD) $(HTMLS) $(BUILD)/404.html $(BUILD)/mysite.css $(BUILD)/jemdoc-default.css $(BUILD)/assets $(BUILD)/README.md $(BUILD)/robots.txt $(BUILD)/sitemap.xml inject-date
 
 $(BUILD)/README.md: deploy_README.md
 	cp deploy_README.md $(BUILD)/README.md
+
+$(BUILD)/robots.txt: robots.txt
+	cp robots.txt $(BUILD)/robots.txt
+
+$(BUILD)/sitemap.xml:
+	@mkdir -p $(BUILD)
+	@echo '<?xml version="1.0" encoding="UTF-8"?>' > $(BUILD)/sitemap.xml
+	@echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $(BUILD)/sitemap.xml
+	@today=$$(date -u +%Y-%m-%d); \
+	for path in '' fr/ ja/; do \
+	  for page in index publications research experiences awards other; do \
+	    echo "  <url><loc>https://mesabo.github.io/$${path}$${page}.html</loc><lastmod>$${today}</lastmod></url>" >> $(BUILD)/sitemap.xml; \
+	  done; \
+	done
+	@echo '</urlset>' >> $(BUILD)/sitemap.xml
+
+# Build the 404 page (no menu, sits at root, served by GitHub Pages on any miss)
+$(BUILD)/404.html: 404.jemdoc $(CONF)
+	@mkdir -p $(BUILD)
+	$(JEMDOC) -c $(CONF) -o $@ $<
+
+# Replace the __BUILD_DATE__ placeholder in every built HTML page with today's YYYY-MM
+.PHONY: inject-date
+inject-date:
+	@d=$$(date -u +"%Y-%m"); \
+	find $(BUILD) -name '*.html' -exec sed -i '' "s/__BUILD_DATE__/$$d/g" {} \;
 
 gallery:
 	@python3 tools/gen_gallery.py
