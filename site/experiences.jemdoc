@@ -59,9 +59,14 @@ Foundational work on attention-based transformers for *IoT* load forecasting and
 Backend services and ML pipelines for the *SASEye* observation platform: *IoT* data ingestion, dashboard APIs, model serving on dedicated GPU back-ends. Day-to-day work on production AI / backend systems running alongside the doctoral research.
 
 === Internship --- *[https://j-aic.com Japan AI Consulting (J-AIC)]*
-/1 month, 2025, Tokyo / Yokohama/
+/July 2024, Tokyo --- 1 month/
 
-Hands-on introduction to *Generative AI applied to real-world business problems*: discovery, prototyping, and demonstrating LLM-powered solutions for the consulting practice. Contributed to the *J-AIC booth at the 9th Tokyo International Conference on African Development ([https://www.jica.go.jp/english/ticad TICAD9])* in Yokohama, where I showcased applied ML for African energy and infrastructure use cases.
+Hands-on introduction to *Generative AI applied to real-world business problems*: discovery, prototyping, and demonstrating LLM-powered solutions for the consulting practice. First substantial exposure to building production GenAI systems for industry clients.
+
+=== TICAD9 booth --- *[https://j-aic.com J-AIC]* representative
+/August 2025, Yokohama/
+
+Returned to support J-AIC at the *9th Tokyo International Conference on African Development ([https://www.jica.go.jp/english/ticad TICAD9])*. Staffed the J-AIC booth and demonstrated applied ML and GenAI prototypes for African energy and infrastructure use cases to a high-traffic, international audience including African delegations.
 
 == AI / backend engineering --- ongoing
 
