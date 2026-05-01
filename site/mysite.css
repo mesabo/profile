@@ -407,6 +407,15 @@ strong, b { color: var(--ink); font-weight: 600; }
   margin: 0 0 0.25rem;
 }
 
+.hero .hero-romaji {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--soft);
+  margin: 0.05rem 0 0.55rem;
+  font-weight: 400;
+}
+
 .hero .affiliation {
   font-family: 'Inter', sans-serif;
   color: var(--soft);
