@@ -1,6 +1,9 @@
 # Build output
 build/
 
+# Persistent deploy clone (used by Makefile to preserve history + rollback)
+.deploy/
+
 # Auto-generated PDF thumbnails (regenerated each build)
 assets/papers/*.png
 assets/awards/*.png

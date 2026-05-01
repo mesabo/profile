@@ -107,13 +107,71 @@ serve: build
 clean:
 	rm -rf $(BUILD)
 
+DEPLOY_DIR := .deploy
+
+# Deploy: tag the current state as a rollback point, then commit + push the new build.
+# History is preserved on every deploy AND every previous deploy is tagged for one-line rollback.
 deploy: build
-	@echo "Deploying $(BUILD)/ to $(REMOTE) main branch (force-push)..."
-	cd $(BUILD) && \
-	  rm -rf .git && \
-	  git init -b main && \
+	@echo "Deploying $(BUILD)/ to $(REMOTE) main branch..."
+	@if [ ! -d $(DEPLOY_DIR)/.git ]; then \
+	  rm -rf $(DEPLOY_DIR); \
+	  git clone $(REMOTE) $(DEPLOY_DIR); \
+	fi
+	@cd $(DEPLOY_DIR) && git fetch origin --tags && git checkout main && git reset --hard origin/main
+	@# 1) Tag the current state as a rollback point BEFORE we change anything
+	@cd $(DEPLOY_DIR) && tag="rollback-$$(date -u +%Y%m%d-%H%M%S)" && \
+	  git tag -a "$$tag" -m "rollback point before deploy at $$(date -u +'%Y-%m-%d %H:%M UTC')" && \
+	  git push origin "$$tag" && \
+	  echo "  rollback tag pushed: $$tag"
+	@# 2) Sync new build/ into the clone, deleting any files no longer present
+	rsync -a --delete --exclude='.git' $(BUILD)/ $(DEPLOY_DIR)/
+	@cd $(DEPLOY_DIR) && \
 	  git add -A && \
-	  git -c user.name="$$(git config user.name)" -c user.email="$$(git config user.email)" commit -m "deploy" && \
-	  git remote add origin $(REMOTE) && \
-	  git push -f origin main
+	  if git diff --cached --quiet; then \
+	    echo "  no changes — skipping commit."; \
+	  else \
+	    git commit -m "deploy: $$(date -u +'%Y-%m-%d %H:%M UTC')" && \
+	    git push origin main; \
+	  fi
 	@echo "Done. Site live at https://mesabo.github.io within ~1 minute."
+	@echo "Rollback any time with: make rollback           (revert last deploy)"
+	@echo "Or to a specific tag:   make rollback-to TAG=rollback-YYYYMMDD-HHMMSS"
+
+# Roll back the deploy by reverting the last commit (one-click undo)
+.PHONY: rollback
+rollback:
+	@echo "Rolling back the last deploy on $(REMOTE)..."
+	@if [ ! -d $(DEPLOY_DIR)/.git ]; then \
+	  rm -rf $(DEPLOY_DIR); \
+	  git clone $(REMOTE) $(DEPLOY_DIR); \
+	fi
+	@cd $(DEPLOY_DIR) && git fetch origin && git checkout main && git reset --hard origin/main && \
+	  git revert --no-edit HEAD && \
+	  git push origin main
+	@echo "Rolled back. Previous version live at https://mesabo.github.io within ~1 minute."
+
+# Roll back to a specific rollback tag — usage: make rollback-to TAG=rollback-YYYYMMDD-HHMMSS
+.PHONY: rollback-to
+rollback-to:
+	@if [ -z "$(TAG)" ]; then echo "Usage: make rollback-to TAG=rollback-YYYYMMDD-HHMMSS"; exit 1; fi
+	@if [ ! -d $(DEPLOY_DIR)/.git ]; then \
+	  rm -rf $(DEPLOY_DIR); \
+	  git clone $(REMOTE) $(DEPLOY_DIR); \
+	fi
+	@cd $(DEPLOY_DIR) && git fetch origin --tags && git checkout main && \
+	  git reset --hard "$(TAG)" && \
+	  git push --force-with-lease origin main
+	@echo "Rolled back to $(TAG). Site live within ~1 minute."
+
+# Show available rollback tags (newest first)
+.PHONY: rollback-list
+rollback-list:
+	@if [ ! -d $(DEPLOY_DIR)/.git ]; then git clone $(REMOTE) $(DEPLOY_DIR); fi
+	@cd $(DEPLOY_DIR) && git fetch origin --tags >/dev/null 2>&1 && \
+	  git tag -l 'rollback-*' --sort=-creatordate | head -20
+
+# History of the deploy repo (each commit = one deploy)
+.PHONY: log
+log:
+	@if [ ! -d $(DEPLOY_DIR)/.git ]; then git clone $(REMOTE) $(DEPLOY_DIR); fi
+	@cd $(DEPLOY_DIR) && git fetch origin >/dev/null && git log --oneline origin/main -20
