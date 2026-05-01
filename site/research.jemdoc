@@ -86,14 +86,14 @@ A frozen language model --- *sLM* or LLM --- reprogrammed with frequency-domain 
   <article class="paper-card">
     <a class="paper-fig" href="assets/papers/tapformer_iot_2026.pdf" target="_blank" rel="noopener" aria-label="Open TAPformer architecture in new tab"><img src="assets/papers/tapformer_iot_2026.png" alt="TAPformer architecture" loading="lazy" /></a>
     <h3>TAPformer</h3>
-    <p class="venue">Internet of Things (Elsevier) &middot; IF&nbsp;7.6, Q1 &middot; 2026</p>
+    <p class="venue">Internet of Things (Elsevier) &middot; IF&nbsp;7.6, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.iot.2026.101895" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
     <p>Long-term <strong>IoT</strong> load forecasting with adaptive attention and temporal projection encoding for non-stationary streams. Trained and benchmarked on a dedicated GPU server.</p>
   </article>
 
   <article class="paper-card">
     <a class="paper-fig" href="assets/papers/tsformer_icufn_2025.pdf" target="_blank" rel="noopener" aria-label="Open TSFormer architecture in new tab"><img src="assets/papers/tsformer_icufn_2025.png" alt="TSFormer architecture" loading="lazy" /></a>
     <h3>TSFormer</h3>
-    <p class="venue">ICUFN 2025 &middot; Lisbon</p>
+    <p class="venue">ICUFN 2025 &middot; Lisbon &middot; <a href="https://ieeexplore.ieee.org/document/11170021" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
     <p>Multi-horizon temporal-aware transformer with learnable positional encodings, for non-stationary energy demand on <strong>IoT</strong> grids.</p>
   </article>
 
@@ -107,14 +107,14 @@ A frozen language model --- *sLM* or LLM --- reprogrammed with frequency-domain 
   <article class="paper-card">
     <a class="paper-fig" href="assets/papers/spec2llama_eswa_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2Llama architecture in new tab"><img src="assets/papers/spec2llama_eswa_2026.png" alt="Spec2Llama architecture" loading="lazy" /></a>
     <h3>Spec2Llama</h3>
-    <p class="venue">Expert Systems with Applications &middot; IF&nbsp;7.5, Q1 &middot; 2026</p>
+    <p class="venue">Expert Systems with Applications &middot; IF&nbsp;7.5, Q1 &middot; 2026 &middot; <a href="https://doi.org/10.1016/j.eswa.2026.131986" target="_blank" rel="noopener" class="doi">DOI ↗</a></p>
     <p>Spectral-aware forecasting that prompts a frozen Llama (used here as a backbone for <strong>sLM</strong>-scale variants) with frequency-domain tokens, generalising across heterogeneous time-series tasks including <strong>IoT</strong> streams.</p>
   </article>
 
   <article class="paper-card">
     <a class="paper-fig" href="assets/papers/spec2llm_icce_2026.pdf" target="_blank" rel="noopener" aria-label="Open Spec2LLM architecture in new tab"><img src="assets/papers/spec2llm_icce_2026.png" alt="Spec2LLM architecture" loading="lazy" /></a>
     <h3>Spec2LLM</h3>
-    <p class="venue">IEEE ICCE 2026 &middot; Dubai</p>
+    <p class="venue">IEEE ICCE 2026 &middot; Dubai &middot; <a href="https://ieeexplore.ieee.org/document/11449688" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
     <p>Spectral-to-language reprogramming for power-transformer temperature forecasting on <strong>IoT-instrumented</strong> grid equipment, with a small-language-model (<strong>sLM</strong>) deployment target.</p>
   </article>
 
@@ -128,7 +128,7 @@ A frozen language model --- *sLM* or LLM --- reprogrammed with frequency-domain 
   <article class="paper-card">
     <a class="paper-fig" href="assets/papers/cnnbilstm_vtc_2024.pdf" target="_blank" rel="noopener" aria-label="Open CNN-BiLSTM hybrid in new tab"><img src="assets/papers/cnnbilstm_vtc_2024.png" alt="CNN-BiLSTM hybrid" loading="lazy" /></a>
     <h3>Hybrid Attention CNN-BiLSTM <span class="award-pill">★ VTS 2024 Award</span></h3>
-    <p class="venue">IEEE VTC2024-Fall &middot; Washington D.C.</p>
+    <p class="venue">IEEE VTC2024-Fall &middot; Washington D.C. &middot; <a href="https://ieeexplore.ieee.org/document/10757868" target="_blank" rel="noopener" class="doi">IEEE Xplore ↗</a></p>
     <p>Hybrid attention-based CNN-BiLSTM with data augmentation for short-term <strong>IoT</strong> load forecasting on dedicated GPU infrastructure. Awarded the IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award.</p>
   </article>
 

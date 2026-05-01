@@ -540,6 +540,28 @@ strong, b { color: var(--ink); font-weight: 600; }
   margin: 0 1rem 0.4rem;
 }
 
+a.doi,
+.paper-card .venue .doi {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border-bottom: none;
+  padding: 0.1rem 0.5rem;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  vertical-align: 0.05em;
+}
+a.doi:hover {
+  background: var(--accent);
+  color: white;
+}
+
 .paper-card p {
   font-size: 0.92rem;
   margin: 0 1rem 1rem;
