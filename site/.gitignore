@@ -1,5 +1,9 @@
 # Build output
 build/
 
+# Auto-generated PDF thumbnails (regenerated each build)
+assets/papers/*.png
+assets/awards/*.png
+
 # macOS
 .DS_Store

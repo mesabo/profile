@@ -43,12 +43,15 @@ $(BUILD)/jemdoc-default.css: tools/jemdoc-default.css
 $(BUILD)/assets: assets
 	rm -rf $(BUILD)/assets
 	cp -R assets $(BUILD)/
-	@# render every paper PDF to a same-name PNG thumbnail in build/ (96 DPI)
-	@for pdf in $(BUILD)/assets/papers/*.pdf; do \
-	  out=$${pdf%.pdf}; \
-	  pdftoppm -png -r 96 -singlefile "$$pdf" "$$out"; \
+	@# render every PDF in papers/ and awards/ to a same-name PNG thumbnail in build/ (96 DPI)
+	@for dir in papers awards; do \
+	  for pdf in $(BUILD)/assets/$$dir/*.pdf; do \
+	    [ -f "$$pdf" ] || continue; \
+	    out=$${pdf%.pdf}; \
+	    pdftoppm -png -r 96 -singlefile "$$pdf" "$$out"; \
+	  done; \
 	done
-	@echo "rendered $$(ls $(BUILD)/assets/papers/*.png 2>/dev/null | wc -l | tr -d ' ') paper thumbnails"
+	@echo "rendered $$(find $(BUILD)/assets/papers $(BUILD)/assets/awards -name '*.png' 2>/dev/null | wc -l | tr -d ' ') PDF thumbnails"
 
 serve: build
 	cd $(BUILD) && python3 -m http.server 8000

@@ -626,24 +626,72 @@ div#fwtitle { margin-bottom: 1.5rem; }
     flex-direction: column;
     max-width: 100%;
   }
+
+  /* === Sticky chip-style navbar === */
   #layout-menu {
     flex: 0 0 auto;
     border-right: none;
     border-bottom: 1px solid var(--rule);
-    padding: 1rem 1.4rem;
+    padding: 0.8rem 1rem;
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 0 1px 0 var(--rule);
   }
-  #layout-menu-inner { position: static; }
+  #layout-menu-inner {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* Hide the textual category labels on mobile — chips are self-explanatory.
+     Keep them in the DOM as full-width row breaks so groups stack visually. */
   #layout-menu .menu-category {
-    margin: 0.7rem 0 0.3rem;
+    flex: 0 0 100%;
+    height: 0;
+    margin: 0.05rem 0 0;
+    padding: 0;
+    overflow: hidden;
+    text-indent: -9999px;
   }
+  /* The first category label is at the very top — kill its row break too */
   #layout-menu .menu-category:first-child {
-    margin-top: 0;
+    display: none;
   }
+
+  /* Each menu link becomes a pill chip */
   #layout-menu .menu-item {
+    margin: 0;
+    display: inline-flex;
+  }
+  #layout-menu .menu-item a {
     display: inline-block;
-    margin: 0.2rem 0.9rem 0.2rem 0;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.82rem;
+    line-height: 1.1;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  #layout-menu .menu-item a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  #layout-menu .menu-item a.current {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    font-weight: 600;
   }
   #layout-menu .menu-item a.current::before { display: none; }
+
   #layout-content {
     padding: 1.6rem 1.2rem 3rem;
   }
@@ -655,7 +703,6 @@ div#fwtitle { margin-bottom: 1.5rem; }
   .hero img.avatar { width: 110px; height: 110px; }
   .hero .hero-name { font-size: 1.7rem; }
   h1 { font-size: 1.7rem; }
-  .trip-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 480px) {

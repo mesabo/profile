@@ -1,35 +1,31 @@
 # jemdoc: menu{MENU}{awards.html}, nofooter
 = Awards & honours
 
-== 2024 --- IEEE VTS Tokyo/Japan Chapter Student Paper Award & Encouragement Award
-
-/IEEE 100th Vehicular Technology Conference (VTC2024-Fall), Washington D.C., USA, October 2024./
-
-Awarded for the paper *Enhancing Short-Term Load Forecasting in IoT: A Hybrid Attention-based CNN-BiLSTM with Data Augmentation*, recognising outstanding student work in applied machine learning for IoT and energy systems.
-
-[img{500px}{}{IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award certificate} assets/awards/vtc2024_award.png]
-
 ~~~
 {}{raw}
-<p>
-  <a href="assets/awards/vtc2024_award.pdf" target="_blank" rel="noopener">Download the certificate (PDF)</a>
-  &middot;
-  <a href="publications.html">See the paper on the publications page</a>
-</p>
+<div class="paper-grid">
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/awards/vtc2024_award.pdf" target="_blank" rel="noopener" aria-label="Open VTS 2024 Student Paper Award certificate"><img src="assets/awards/vtc2024_award.png" alt="IEEE VTS Tokyo/Japan Chapter 2024 Student Paper Award certificate" loading="lazy" /></a>
+    <h3>IEEE VTS Tokyo/Japan Chapter — Student Paper Award &amp; Encouragement Award <span class="award-pill">2024</span></h3>
+    <p class="venue">VTC2024-Fall &middot; Washington D.C., USA &middot; October 2024</p>
+    <p>Awarded for the paper <em>Enhancing Short-Term Load Forecasting in IoT: A Hybrid Attention-based CNN-BiLSTM with Data Augmentation</em>, recognising outstanding student work in applied machine learning for IoT and energy systems.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/awards/jica_development_studies_program_2025.pdf" target="_blank" rel="noopener" aria-label="Open JICA Development Studies Program 2025 certificate"><img src="assets/awards/jica_development_studies_program_2025.png" alt="JICA Development Studies Program 2025 certificate" loading="lazy" /></a>
+    <h3>JICA Development Studies Program (JICA専用講座) <span class="award-pill">2025</span></h3>
+    <p class="venue">Japan International Cooperation Agency (JICA) &middot; 2025</p>
+    <p>Completion of the JICA-dedicated graduate course on international development, with a focus on technology transfer and sustainable infrastructure for emerging economies.</p>
+  </article>
+
+  <article class="paper-card">
+    <a class="paper-fig" href="assets/awards/icecet_reviewer_certificate_2026.pdf" target="_blank" rel="noopener" aria-label="Open IEEE ICECET 2026 reviewer certificate"><img src="assets/awards/icecet_reviewer_certificate_2026.png" alt="IEEE ICECET 2026 reviewer certificate" loading="lazy" /></a>
+    <h3>Reviewer — IEEE ICECET 2026 <span class="award-pill">2026</span></h3>
+    <p class="venue">IEEE International Conference on Electrical, Computer and Energy Technologies &middot; Rome, Italy &middot; July 2026</p>
+    <p>Review Committee Member appointed by the IEEE Italy Section.</p>
+  </article>
+
+</div>
 ~~~
 
-== Service appointments
-
-=== 2026 --- Review Committee Member, IEEE ICECET
-/IEEE International Conference on Electrical, Computer and Energy Technologies, Rome, Italy, July 2026 --- IEEE Italy Section./
-
-Review committee for an international IEEE conference covering the intersection of electrical, computer and energy technologies.
-
-=== Ongoing --- Reviewer, Theoretical Computer Science (Elsevier)
-/ISSN 0304-3975./
-
-Peer review for a top-tier journal in theoretical computer science.
-
-== Future updates
-
-This page is updated as new awards, fellowships, and recognitions arrive. Public CV variants on [experiences.html the experiences page] mirror this list.
