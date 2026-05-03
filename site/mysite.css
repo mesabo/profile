@@ -588,7 +588,9 @@ strong, b { color: var(--ink); font-weight: 600; }
 
 .trip-photo {
   display: block;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  padding-bottom: 100%;     /* fallback aspect-ratio 1:1, works everywhere */
+  aspect-ratio: 1 / 1;      /* modern browsers — same effect, both safe together */
   overflow: hidden;
   border-radius: 4px;
   background: var(--accent-soft);
@@ -596,7 +598,12 @@ strong, b { color: var(--ink); font-weight: 600; }
   position: relative;
   scroll-snap-align: start;
 }
+@supports (aspect-ratio: 1/1) {
+  .trip-photo { padding-bottom: 0; }
+}
 .trip-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -652,13 +659,21 @@ strong, b { color: var(--ink); font-weight: 600; }
 
 .paper-card .paper-fig {
   display: block;
+  width: 100%;
+  padding-bottom: 75%;     /* 4:3 fallback */
   aspect-ratio: 4 / 3;
   background: white;
   border-bottom: 1px solid var(--rule);
   overflow: hidden;
   border: none;
+  position: relative;
+}
+@supports (aspect-ratio: 4/3) {
+  .paper-card .paper-fig { padding-bottom: 0; }
 }
 .paper-card .paper-fig img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
