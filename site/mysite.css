@@ -200,6 +200,16 @@ body {
   transform: translateY(-50%);
 }
 
+/* Language switcher: only the current flag stays in colour, others are dimmed
+   so the visual cue matches "selected vs not selected" intuition. */
+#layout-menu .menu-item-lang a:not(.current) {
+  filter: grayscale(0.85) opacity(0.6);
+  transition: filter 0.15s ease;
+}
+#layout-menu .menu-item-lang a:not(.current):hover {
+  filter: grayscale(0) opacity(1);
+}
+
 /* === Main content === */
 
 #layout-content {

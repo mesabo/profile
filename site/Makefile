@@ -65,6 +65,8 @@ $(EN_HTMLS): $(BUILD)/%.html: %.jemdoc MENU $(CONF)
 	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
 	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
 	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
+	@# Strip target="_blank" from internal .html links (jemdoc adds it to body links incorrectly)
+	@sed -i '' -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
 
 # === French (build/fr/) ===
 $(FR_HTMLS): $(BUILD)/fr/%.html: fr/%.jemdoc fr/MENU $(CONF)
@@ -73,6 +75,8 @@ $(FR_HTMLS): $(BUILD)/fr/%.html: fr/%.jemdoc fr/MENU $(CONF)
 	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
 	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
 	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
+	@# Strip target="_blank" from internal .html links (jemdoc adds it to body links incorrectly)
+	@sed -i '' -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
 
 # === Japanese (build/ja/) ===
 $(JA_HTMLS): $(BUILD)/ja/%.html: ja/%.jemdoc ja/MENU $(CONF)
@@ -81,6 +85,8 @@ $(JA_HTMLS): $(BUILD)/ja/%.html: ja/%.jemdoc ja/MENU $(CONF)
 	@sed -i '' -e 's/target=&ldquo;blank&rdquo;/target="_blank" rel="noopener"/g' \
 	           -e 's/target="blank"/target="_blank" rel="noopener"/g' \
 	           -e 's|<a href="\(\.\./[^"]*\)" class="current">|<a href="\1">|g' $@
+	@# Strip target="_blank" from internal .html links (jemdoc adds it to body links incorrectly)
+	@sed -i '' -E -e 's|<a href="([^"]+\.html)" target="_blank" rel="noopener">|<a href="\1">|g' $@
 
 $(BUILD)/mysite.css: mysite.css
 	cp mysite.css $(BUILD)/
