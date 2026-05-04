@@ -565,8 +565,12 @@ strong, b { color: var(--ink); font-weight: 600; }
 
 /* === Trip / photo gallery — horizontal scroller (5 visible, up to 7 in row) === */
 
-.trip { margin-bottom: 2rem; }
+.trip {
+  margin-bottom: 2rem;
+  position: relative;
+}
 
+/* desktop: horizontal scroll, 5 visible, with right-edge fade hinting more */
 .trip-grid {
   display: grid;
   grid-auto-flow: column;
@@ -577,6 +581,15 @@ strong, b { color: var(--ink); font-weight: 600; }
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: var(--accent) var(--rule-soft);
+}
+.trip-grid::after {
+  content: '';
+  position: sticky;
+  right: 0;
+  width: 40px;
+  flex-shrink: 0;
+  background: linear-gradient(to right, transparent, var(--bg) 80%);
+  pointer-events: none;
 }
 .trip-grid::-webkit-scrollbar { height: 8px; }
 .trip-grid::-webkit-scrollbar-track {
@@ -626,14 +639,20 @@ strong, b { color: var(--ink); font-weight: 600; }
   cursor: default;
 }
 
+/* mobile: all photos visible — wrap to multiple rows instead of horizontal scroll */
 @media (max-width: 720px) {
   .trip-grid {
-    grid-auto-columns: calc((100% - 2 * 0.5rem) / 3);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+    scroll-snap-type: none;
   }
+  .trip-grid::after { display: none; }
 }
 @media (max-width: 480px) {
   .trip-grid {
-    grid-auto-columns: calc((100% - 0.5rem) / 2);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
