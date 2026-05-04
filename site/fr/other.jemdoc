@@ -10,12 +10,12 @@
 <details class="more facet-research"><summary>Code de recherche &mdash; 6 repos</summary>
 <div class="more-body">
 <ul>
-  <li><strong>smartgrid-coopt</strong> &mdash; cadre unifié de co-optimisation smart-grid (travail doctoral en cours).</li>
-  <li><strong>hataformer</strong> &mdash; attention locale + globale hybride pour la prévision énergétique.</li>
-  <li><strong>iTransformers</strong> &mdash; expériences sur transformers inversés pour séries temporelles.</li>
-  <li><strong>ForecastNet</strong> &mdash; backbone de prévision multi-pas.</li>
-  <li><strong>ML-Time-Series-Forecasting</strong> &mdash; baselines et ablations regroupées.</li>
-  <li><strong>STLF-IoT</strong> &mdash; prévision court-terme de charge en environnement IoT.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>smartgrid-coopt</strong> &mdash; cadre unifié de co-optimisation smart-grid (travail doctoral en cours).</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>hataformer</strong> &mdash; attention locale + globale hybride pour la prévision énergétique.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>iTransformers</strong> &mdash; expériences sur transformers inversés pour séries temporelles.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>ForecastNet</strong> &mdash; backbone de prévision multi-pas.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>ML-Time-Series-Forecasting</strong> &mdash; baselines et ablations regroupées.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>STLF-IoT</strong> &mdash; prévision court-terme de charge en environnement IoT.</li>
 </ul>
 </div>
 </details>
@@ -23,11 +23,11 @@
 <details class="more facet-engineer"><summary>Ingénierie IA / backend &mdash; 5 repos</summary>
 <div class="more-body">
 <ul>
-  <li><strong>Energent-AI</strong> &mdash; système d'agents pour le raisonnement énergétique.</li>
-  <li><strong>AIOS-Agent</strong> &mdash; prototype d'orchestration façon agent-OS.</li>
-  <li><strong>GenerativeTextAI</strong> &mdash; expériences en génération NLP.</li>
-  <li><strong>HousePricePredictionApi</strong> &mdash; service d'inférence ML de bout en bout.</li>
-  <li><strong>baseline_ai</strong> &mdash; utilitaires d'entraînement ML et scaffolding notebook.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>Energent-AI</strong> &mdash; système d'agents pour le raisonnement énergétique.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>AIOS-Agent</strong> &mdash; prototype d'orchestration façon agent-OS.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>GenerativeTextAI</strong> &mdash; expériences en génération NLP.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>HousePricePredictionApi</strong> &mdash; service d'inférence ML de bout en bout.</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>baseline_ai</strong> &mdash; utilitaires d'entraînement ML et scaffolding notebook.</li>
 </ul>
 </div>
 </details>
@@ -35,12 +35,12 @@
 <details class="more facet-fullstack"><summary>Full-stack &amp; mobile &mdash; 6 repos</summary>
 <div class="more-body">
 <ul>
-  <li><strong>crudium</strong> (Dart) &nbsp;⭐&nbsp; &mdash; bibliothèque scaffolding Flutter.</li>
-  <li><strong>chronohouse</strong> (Dart) &mdash; application mobile de suivi du temps.</li>
-  <li><strong>progistack_mobile</strong> (Dart) &mdash; pile mobile de productivité.</li>
-  <li><strong>flutter_graphql_io</strong> &mdash; intégration Flutter + GraphQL.</li>
-  <li><strong>flask_crud</strong> + <strong>react_crud</strong> &mdash; backend Flask + frontend React de référence CRUD.</li>
-  <li><strong>nodejs_graphql_mongodb</strong> &mdash; pattern backend Node + GraphQL + MongoDB.</li>
+  <li><span class="ico"><img src="/assets/icons/dart.svg" alt=""></span> <strong>crudium</strong> (Dart) &nbsp;⭐&nbsp; &mdash; bibliothèque scaffolding Flutter.</li>
+  <li><span class="ico"><img src="/assets/icons/dart.svg" alt=""></span> <strong>chronohouse</strong> (Dart) &mdash; application mobile de suivi du temps.</li>
+  <li><span class="ico"><img src="/assets/icons/dart.svg" alt=""></span> <strong>progistack_mobile</strong> (Dart) &mdash; pile mobile de productivité.</li>
+  <li><span class="ico"><img src="/assets/icons/flutter.svg" alt=""></span> <strong>flutter_graphql_io</strong> &mdash; intégration Flutter + GraphQL.</li>
+  <li><span class="ico"><img src="/assets/icons/flask.svg" alt=""></span> <strong>flask_crud</strong> + <strong>react_crud</strong> &mdash; backend Flask + frontend React de référence CRUD.</li>
+  <li><span class="ico"><img src="/assets/icons/nodedotjs.svg" alt=""></span> <strong>nodejs_graphql_mongodb</strong> &mdash; pattern backend Node + GraphQL + MongoDB.</li>
 </ul>
 </div>
 </details>

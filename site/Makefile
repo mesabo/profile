@@ -46,11 +46,22 @@ $(BUILD)/404.html: 404.jemdoc $(CONF)
 	@mkdir -p $(BUILD)
 	$(JEMDOC) -c $(CONF) -o $@ $<
 
-# Replace the __BUILD_DATE__ placeholder in every built HTML page with today's YYYY-MM
+# Replace the __BUILD_DATE__ placeholder + inject per-page hreflang tags + cache-bust CSS.
 .PHONY: inject-date
 inject-date:
 	@d=$$(date -u +"%Y-%m"); \
-	find $(BUILD) -name '*.html' -exec sed -i '' "s/__BUILD_DATE__/$$d/g" {} \;
+	v=$$(date -u +"%Y%m%d%H%M"); \
+	find $(BUILD) -name '*.html' -exec sed -i '' "s/__BUILD_DATE__/$$d/g" {} \; ; \
+	find $(BUILD) -name '*.html' -exec sed -i '' "s|/mysite.css\"|/mysite.css?v=$$v\"|g" {} \;
+	@# inject per-page hreflang tags (only for pages that have all 3 language versions)
+	@for page in index publications research experiences skills awards other; do \
+	  for f in $(BUILD)/$$page.html $(BUILD)/fr/$$page.html $(BUILD)/ja/$$page.html; do \
+	    [ -f "$$f" ] || continue; \
+	    sed -i '' "s|<!--HREFLANG-->|<link rel=\"alternate\" hreflang=\"en\" href=\"https://mesabo.github.io/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"fr\" href=\"https://mesabo.github.io/fr/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"ja\" href=\"https://mesabo.github.io/ja/$$page.html\" />\\$$(printf '\n')<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://mesabo.github.io/$$page.html\" />|" "$$f"; \
+	  done; \
+	done
+	@# strip stray <!--HREFLANG--> from any other pages (404 etc.)
+	@find $(BUILD) -name '*.html' -exec sed -i '' 's|<!--HREFLANG-->||g' {} \;
 
 gallery:
 	@python3 tools/gen_gallery.py

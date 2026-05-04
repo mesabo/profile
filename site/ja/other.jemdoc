@@ -10,12 +10,12 @@
 <details class="more facet-research"><summary>研究コード &mdash; 6 リポジトリ</summary>
 <div class="more-body">
 <ul>
-  <li><strong>smartgrid-coopt</strong> &mdash; スマートグリッド ディスパッチと通信ルーティングの統合協調最適化フレームワーク（博士課程作業中）。</li>
-  <li><strong>hataformer</strong> &mdash; エネルギー予測向けハイブリッド ローカル + グローバル注意機構。</li>
-  <li><strong>iTransformers</strong> &mdash; 時系列向け倒置 transformer 実験。</li>
-  <li><strong>ForecastNet</strong> &mdash; マルチ ステップ予測バックボーン。</li>
-  <li><strong>ML-Time-Series-Forecasting</strong> &mdash; ベースラインとアブレーションをまとめたリポジトリ。</li>
-  <li><strong>STLF-IoT</strong> &mdash; IoT 環境向け短期負荷予測。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>smartgrid-coopt</strong> &mdash; スマートグリッド ディスパッチと通信ルーティングの統合協調最適化フレームワーク（博士課程作業中）。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>hataformer</strong> &mdash; エネルギー予測向けハイブリッド ローカル + グローバル注意機構。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>iTransformers</strong> &mdash; 時系列向け倒置 transformer 実験。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>ForecastNet</strong> &mdash; マルチ ステップ予測バックボーン。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>ML-Time-Series-Forecasting</strong> &mdash; ベースラインとアブレーションをまとめたリポジトリ。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>STLF-IoT</strong> &mdash; IoT 環境向け短期負荷予測。</li>
 </ul>
 </div>
 </details>
@@ -23,11 +23,11 @@
 <details class="more facet-engineer"><summary>AI / バックエンド エンジニアリング &mdash; 5 リポジトリ</summary>
 <div class="more-body">
 <ul>
-  <li><strong>Energent-AI</strong> &mdash; エネルギー領域推論のためのエージェント システム。</li>
-  <li><strong>AIOS-Agent</strong> &mdash; agent-OS 風オーケストレーション プロトタイプ。</li>
-  <li><strong>GenerativeTextAI</strong> &mdash; NLP 生成の実験。</li>
-  <li><strong>HousePricePredictionApi</strong> &mdash; エンドツーエンドの ML 推論サービス。</li>
-  <li><strong>baseline_ai</strong> &mdash; 再利用可能な ML 学習ユーティリティとノートブック スキャフォールディング。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>Energent-AI</strong> &mdash; エネルギー領域推論のためのエージェント システム。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>AIOS-Agent</strong> &mdash; agent-OS 風オーケストレーション プロトタイプ。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>GenerativeTextAI</strong> &mdash; NLP 生成の実験。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>HousePricePredictionApi</strong> &mdash; エンドツーエンドの ML 推論サービス。</li>
+  <li><span class="ico"><img src="/assets/icons/python.svg" alt=""></span> <strong>baseline_ai</strong> &mdash; 再利用可能な ML 学習ユーティリティとノートブック スキャフォールディング。</li>
 </ul>
 </div>
 </details>
@@ -35,12 +35,12 @@
 <details class="more facet-fullstack"><summary>フルスタック ＆ モバイル &mdash; 6 リポジトリ</summary>
 <div class="more-body">
 <ul>
-  <li><strong>crudium</strong>（Dart）&nbsp;⭐&nbsp; &mdash; Flutter スキャフォールディング ライブラリ。</li>
-  <li><strong>chronohouse</strong>（Dart）&mdash; 時間管理モバイル アプリ。</li>
-  <li><strong>progistack_mobile</strong>（Dart）&mdash; モバイル生産性スタック。</li>
-  <li><strong>flutter_graphql_io</strong> &mdash; Flutter + GraphQL 統合サンプル。</li>
-  <li><strong>flask_crud</strong> + <strong>react_crud</strong> &mdash; Flask バックエンド + React フロントエンドの CRUD リファレンス。</li>
-  <li><strong>nodejs_graphql_mongodb</strong> &mdash; Node + GraphQL + MongoDB バックエンド パターン。</li>
+  <li><span class="ico"><img src="/assets/icons/dart.svg" alt=""></span> <strong>crudium</strong>（Dart）&nbsp;⭐&nbsp; &mdash; Flutter スキャフォールディング ライブラリ。</li>
+  <li><span class="ico"><img src="/assets/icons/dart.svg" alt=""></span> <strong>chronohouse</strong>（Dart）&mdash; 時間管理モバイル アプリ。</li>
+  <li><span class="ico"><img src="/assets/icons/dart.svg" alt=""></span> <strong>progistack_mobile</strong>（Dart）&mdash; モバイル生産性スタック。</li>
+  <li><span class="ico"><img src="/assets/icons/flutter.svg" alt=""></span> <strong>flutter_graphql_io</strong> &mdash; Flutter + GraphQL 統合サンプル。</li>
+  <li><span class="ico"><img src="/assets/icons/flask.svg" alt=""></span> <strong>flask_crud</strong> + <strong>react_crud</strong> &mdash; Flask バックエンド + React フロントエンドの CRUD リファレンス。</li>
+  <li><span class="ico"><img src="/assets/icons/nodedotjs.svg" alt=""></span> <strong>nodejs_graphql_mongodb</strong> &mdash; Node + GraphQL + MongoDB バックエンド パターン。</li>
 </ul>
 </div>
 </details>
