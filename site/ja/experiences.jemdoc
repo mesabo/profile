@@ -93,9 +93,9 @@ IoT エネルギー システム向けの transformer ベース予測（TAPforme
 <details class="more"><summary>スタックと主要プロジェクト</summary>
 <div class="more-body">
 <ul>
-  <li><strong>Web:</strong> React フロントエンドが Flask または Node.js GraphQL バックエンドを利用; データ層は MongoDB および PostgreSQL。</li>
-  <li><strong>モバイル:</strong> Flutter / Dart アプリ &mdash; <em>crudium</em>&nbsp;⭐（Flutter スキャフォールディング ライブラリ）、<em>chronohouse</em>（時間管理）、<em>progistack_mobile</em>（生産性スタック）、<em>flutter_graphql_io</em>（GraphQL 統合）。</li>
-  <li><strong>DevOps:</strong> Docker ベース開発フロー（<em>debug_with_docker</em>）。</li>
+  <li><strong>Web:</strong> <span class="ico"><img src="/assets/icons/react.svg" alt=""> React</span> フロントエンドが <span class="ico"><img src="/assets/icons/flask.svg" alt=""> Flask</span> または <span class="ico"><img src="/assets/icons/nodedotjs.svg" alt=""> Node.js</span> <span class="ico"><img src="/assets/icons/graphql.svg" alt=""> GraphQL</span> を利用; データ層は <span class="ico"><img src="/assets/icons/mongodb.svg" alt=""> MongoDB</span> および <span class="ico"><img src="/assets/icons/postgresql.svg" alt=""> PostgreSQL</span>。</li>
+  <li><strong>モバイル:</strong> <span class="ico"><img src="/assets/icons/flutter.svg" alt=""> Flutter</span> / <span class="ico"><img src="/assets/icons/dart.svg" alt=""> Dart</span> アプリ &mdash; <em>crudium</em>&nbsp;⭐、<em>chronohouse</em>、<em>progistack_mobile</em>、<em>flutter_graphql_io</em>。</li>
+  <li><strong>DevOps:</strong> <span class="ico"><img src="/assets/icons/docker.svg" alt=""> Docker</span>; <span class="ico"><img src="/assets/icons/githubactions.svg" alt=""> GitHub Actions</span>; <span class="ico"><img src="/assets/icons/linux.svg" alt=""> Linux</span>。</li>
 </ul>
 </div>
 </details>

@@ -877,6 +877,26 @@ details.more > .more-body p:last-child { margin-bottom: 0.2rem; }
 details.more > .more-body ul,
 details.more > .more-body ol { margin: 0.4rem 0 0.4rem 1.2rem; padding-left: 0.4rem; }
 
+/* === Inline icon + text helper (for sprinkling icons in body copy) === */
+
+.ico {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+.ico img {
+  width: 12px !important;
+  height: 12px !important;
+  max-width: 12px;
+  max-height: 12px;
+  flex-shrink: 0;
+  display: inline-block;
+  object-fit: contain;
+  vertical-align: -1px;
+  opacity: 0.95;
+}
+
 /* === Skills page chips === */
 
 .skills-tier {

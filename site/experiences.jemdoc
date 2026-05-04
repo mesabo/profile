@@ -93,9 +93,9 @@ Production-grade web (React + Node.js / Flask, REST and GraphQL, MongoDB) and mo
 <details class="more"><summary>Stack &amp; selected projects</summary>
 <div class="more-body">
 <ul>
-  <li><strong>Web:</strong> React frontends consuming Flask or Node.js GraphQL backends; MongoDB and PostgreSQL on the data layer.</li>
-  <li><strong>Mobile:</strong> Flutter / Dart applications &mdash; <em>crudium</em>&nbsp;⭐ (Flutter scaffolding library), <em>chronohouse</em> (time-tracking), <em>progistack_mobile</em> (productivity stack), <em>flutter_graphql_io</em> (GraphQL integration).</li>
-  <li><strong>DevOps:</strong> Docker-based development workflows (<em>debug_with_docker</em>).</li>
+  <li><strong>Web:</strong> <span class="ico"><img src="/assets/icons/react.svg" alt=""> React</span> frontends consuming <span class="ico"><img src="/assets/icons/flask.svg" alt=""> Flask</span> or <span class="ico"><img src="/assets/icons/nodedotjs.svg" alt=""> Node.js</span> <span class="ico"><img src="/assets/icons/graphql.svg" alt=""> GraphQL</span> backends; <span class="ico"><img src="/assets/icons/mongodb.svg" alt=""> MongoDB</span> and <span class="ico"><img src="/assets/icons/postgresql.svg" alt=""> PostgreSQL</span> on the data layer.</li>
+  <li><strong>Mobile:</strong> <span class="ico"><img src="/assets/icons/flutter.svg" alt=""> Flutter</span> / <span class="ico"><img src="/assets/icons/dart.svg" alt=""> Dart</span> applications &mdash; <em>crudium</em>&nbsp;⭐, <em>chronohouse</em>, <em>progistack_mobile</em>, <em>flutter_graphql_io</em>.</li>
+  <li><strong>DevOps:</strong> <span class="ico"><img src="/assets/icons/docker.svg" alt=""> Docker</span>-based workflows; <span class="ico"><img src="/assets/icons/githubactions.svg" alt=""> GitHub Actions</span> for CI; <span class="ico"><img src="/assets/icons/linux.svg" alt=""> Linux</span> server admin.</li>
 </ul>
 </div>
 </details>

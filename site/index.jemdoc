@@ -38,11 +38,17 @@ Outside research, I build production *AI / backend systems* and *full-stack web 
 
 == Engineering focus
 
-- Production ML pipelines (training, inference, deployment) on *dedicated GPU servers*
-- *IoT* data ingestion and edge model deployment
-- Backend services in Python (Flask) and Node.js, with REST and GraphQL
-- Data layers in MongoDB and SQL
-- Full-stack web (React) and mobile (Flutter / Dart)
+~~~
+{}{raw}
+<ul>
+  <li>Production ML pipelines (training, inference, deployment) on <strong>dedicated GPU servers</strong> <span class="ico"><img src="/assets/icons/nvidia.svg" alt=""></span> <span class="ico"><img src="/assets/icons/pytorch.svg" alt=""></span></li>
+  <li><strong>IoT</strong> data ingestion and edge model deployment</li>
+  <li>Backend services in <span class="ico"><img src="/assets/icons/python.svg" alt=""> Python</span> (<span class="ico"><img src="/assets/icons/flask.svg" alt=""> Flask</span>, <span class="ico"><img src="/assets/icons/fastapi.svg" alt=""> FastAPI</span>) and <span class="ico"><img src="/assets/icons/nodedotjs.svg" alt=""> Node.js</span>, with REST and <span class="ico"><img src="/assets/icons/graphql.svg" alt=""> GraphQL</span></li>
+  <li>Data layers: <span class="ico"><img src="/assets/icons/mongodb.svg" alt=""> MongoDB</span> · <span class="ico"><img src="/assets/icons/postgresql.svg" alt=""> PostgreSQL</span> · <span class="ico"><img src="/assets/icons/mysql.svg" alt=""> MySQL</span></li>
+  <li>Frontend (<span class="ico"><img src="/assets/icons/react.svg" alt=""> React</span>) and mobile (<span class="ico"><img src="/assets/icons/flutter.svg" alt=""> Flutter</span> / <span class="ico"><img src="/assets/icons/dart.svg" alt=""> Dart</span>)</li>
+  <li>Cloud: <span class="ico"><img src="/assets/icons/googlecloud.svg" alt=""> Google Cloud</span> · containers with <span class="ico"><img src="/assets/icons/docker.svg" alt=""> Docker</span> · CI with <span class="ico"><img src="/assets/icons/githubactions.svg" alt=""> GitHub Actions</span></li>
+</ul>
+~~~
 
 == Highlights
 
