@@ -1,8 +1,16 @@
 # Build output (deployed via site/Makefile to mesabo/mesabo.github.io)
 site/build/
 
-# Auto-generated paper thumbnails (regenerated from .pdf during build)
+# Persistent deploy clone (preserves history + rollback tags)
+site/.deploy/
+
+# Auto-generated PDF thumbnails (regenerated from .pdf during build)
 site/assets/papers/*.png
+site/assets/awards/*.png
+
+# Local source-quality backup of assets — NEVER deploy or commit
+# (everything used by the site is already in site/assets/)
+ressources/
 
 # macOS
 .DS_Store
