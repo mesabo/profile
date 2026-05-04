@@ -877,6 +877,101 @@ details.more > .more-body p:last-child { margin-bottom: 0.2rem; }
 details.more > .more-body ul,
 details.more > .more-body ol { margin: 0.4rem 0 0.4rem 1.2rem; padding-left: 0.4rem; }
 
+/* === Skills page chips === */
+
+.skills-tier {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--soft);
+  margin: 1.4rem 0 0.5rem;
+}
+.skills-tier:first-of-type { margin-top: 0.4rem; }
+
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.4rem 0 0.6rem;
+}
+.skills-chips span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.32rem 0.7rem;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.skills-chips span:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.skills-chips span img {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.skills-chips span small {
+  font-size: 0.72rem;
+  color: var(--soft);
+  font-weight: 400;
+  margin-left: 0.15rem;
+}
+
+.skills-chips-soft span {
+  background: var(--rule-soft);
+  color: var(--soft);
+  border-color: transparent;
+}
+.skills-chips-soft span:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.skills-chips-langs span {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  border-color: var(--accent-soft);
+  font-size: 0.85rem;
+}
+.skills-chips-langs span small {
+  color: var(--accent-strong);
+  opacity: 0.75;
+}
+
+.skills-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: var(--soft);
+  margin: 0.5rem 0 0.4rem;
+}
+
+.skills-cta {
+  margin-top: 2.5rem;
+  padding: 1rem 1.2rem;
+  background: var(--rule-soft);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+}
+.skills-cta a { font-weight: 600; }
+
+/* In dark theme, brighten icons that were originally pure black */
+html[data-theme="dark"] .skills-chips span img {
+  filter: brightness(1.15);
+}
+
 /* === Footer === */
 
 #footer, #lastupdated, #site-footer {

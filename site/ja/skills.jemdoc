@@ -1,0 +1,168 @@
+# jemdoc: menu{MENU}{skills.html}, nofooter
+= スキル
+
+日々使っている言語・ツール・手法の一覧です。
+
+== プログラミング言語
+
+~~~
+{}{raw}
+<h4 class="skills-tier">日常的に使用</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/python.svg" alt="" /> Python</span>
+  <span><img src="/assets/icons/java.svg" alt="" /> Java</span>
+  <span><img src="/assets/icons/dart.svg" alt="" /> Dart</span>
+  <span><img src="/assets/icons/postgresql.svg" alt="" /> SQL</span>
+  <span><img src="/assets/icons/gnubash.svg" alt="" /> Bash</span>
+</div>
+
+<h4 class="skills-tier">定期的に使用</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/cplusplus.svg" alt="" /> C / C++ <small>(GPU / CUDA glue)</small></span>
+  <span><img src="/assets/icons/javascript.svg" alt="" /> JavaScript</span>
+</div>
+
+<h4 class="skills-tier">読解 / 必要に応じて</h4>
+<div class="skills-chips skills-chips-soft">
+  <span><img src="/assets/icons/go.svg" alt="" /> Go</span>
+  <span><img src="/assets/icons/swift.svg" alt="" /> Swift</span>
+  <span><img src="/assets/icons/kotlin.svg" alt="" /> Kotlin</span>
+  <span><img src="/assets/icons/typescript.svg" alt="" /> TypeScript</span>
+</div>
+~~~
+
+== AI / ML スタック
+
+~~~
+{}{raw}
+<h4 class="skills-tier">フレームワーク</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/pytorch.svg" alt="" /> PyTorch</span>
+  <span><img src="/assets/icons/huggingface.svg" alt="" /> Hugging Face Transformers</span>
+  <span>vLLM</span>
+  <span><img src="/assets/icons/scikitlearn.svg" alt="" /> scikit-learn</span>
+  <span><img src="/assets/icons/pandas.svg" alt="" /> pandas</span>
+  <span><img src="/assets/icons/numpy.svg" alt="" /> NumPy</span>
+</div>
+
+<h4 class="skills-tier">LLM &amp; API</h4>
+<div class="skills-chips">
+  <span>OpenAI</span>
+  <span><img src="/assets/icons/anthropic.svg" alt="" /> Anthropic</span>
+  <span>Llama</span>
+  <span>Qwen</span>
+  <span>Phi</span>
+</div>
+
+<h4 class="skills-tier">研究領域</h4>
+<div class="skills-chips skills-chips-soft">
+  <span>時系列予測</span>
+  <span>スペクトル再プログラミング</span>
+  <span>グラフ ニューラル ネットワーク</span>
+  <span>連合学習 (FL)</span>
+  <span>プロンプト エンジニアリング</span>
+  <span>敵対的 / ハルシネーション テスト</span>
+</div>
+~~~
+
+== バックエンド &amp; API
+
+~~~
+{}{raw}
+<div class="skills-chips">
+  <span><img src="/assets/icons/flask.svg" alt="" /> Flask</span>
+  <span><img src="/assets/icons/fastapi.svg" alt="" /> FastAPI</span>
+  <span><img src="/assets/icons/nodedotjs.svg" alt="" /> Node.js</span>
+  <span><img src="/assets/icons/express.svg" alt="" /> Express</span>
+  <span><img src="/assets/icons/graphql.svg" alt="" /> GraphQL</span>
+  <span>REST</span>
+  <span><img src="/assets/icons/jsonwebtokens.svg" alt="" /> JWT / OAuth</span>
+</div>
+~~~
+
+== データベース
+
+~~~
+{}{raw}
+<div class="skills-chips">
+  <span><img src="/assets/icons/mongodb.svg" alt="" /> MongoDB</span>
+  <span><img src="/assets/icons/postgresql.svg" alt="" /> PostgreSQL</span>
+  <span><img src="/assets/icons/mysql.svg" alt="" /> MySQL</span>
+  <span><img src="/assets/icons/sqlite.svg" alt="" /> SQLite</span>
+</div>
+<p class="skills-note">スキーマ設計、インデックス、クエリ最適化。PMU・IoT センサ ストリームのデータ エンジニアリング。</p>
+~~~
+
+== フロントエンド &amp; モバイル
+
+~~~
+{}{raw}
+<div class="skills-chips">
+  <span><img src="/assets/icons/flutter.svg" alt="" /> Flutter / Dart</span>
+  <span><img src="/assets/icons/react.svg" alt="" /> React <small>(Hooks, Router, Vite)</small></span>
+  <span><img src="/assets/icons/html5.svg" alt="" /> HTML5</span>
+  <span><img src="/assets/icons/css3.svg" alt="" /> CSS3</span>
+</div>
+<p class="skills-note">公開済みのモバイル アプリ: <em>crudium</em>&nbsp;⭐, <em>chronohouse</em>, <em>progistack_mobile</em>, <em>flutter_graphql_io</em>.</p>
+~~~
+
+== DevOps · クラウド · インフラ
+
+~~~
+{}{raw}
+<h4 class="skills-tier">コンテナ &amp; CI</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/docker.svg" alt="" /> Docker</span>
+  <span><img src="/assets/icons/docker.svg" alt="" /> docker-compose</span>
+  <span><img src="/assets/icons/githubactions.svg" alt="" /> GitHub Actions</span>
+  <span><img src="/assets/icons/make.svg" alt="" /> Make</span>
+</div>
+
+<h4 class="skills-tier">クラウド — Google Cloud Platform</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Compute Engine</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Cloud Storage</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Cloud Run</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> IAM</span>
+</div>
+
+<h4 class="skills-tier">サーバ &amp; GPU</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/linux.svg" alt="" /> Linux サーバ管理</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> マルチ GPU 立ち上げ</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> CUDA toolchain</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> NVIDIA drivers</span>
+  <span>分散学習 (DDP)</span>
+  <span>推論サービス提供</span>
+</div>
+~~~
+
+== 使用言語
+
+~~~
+{}{raw}
+<div class="skills-chips skills-chips-langs">
+  <span>🇫🇷 French <small>母語</small></span>
+  <span>🇬🇧 English <small>流暢</small></span>
+  <span>🇯🇵 Japanese <small>日常会話、学習継続中 — JLPT N4</small></span>
+</div>
+~~~
+
+== 方法 · 仕事のスタイル
+
+- *個人作業* --- 研究コード、インフラ、執筆、デプロイまで一気通貫で担当。
+- *チーム作業* --- 国際共同研究（論文）、JICA 奨学生、YuLab セミナー発表。
+- *メンタリング* --- 法政大学 IIST で TA &amp; RA、ESATIC のメンター（学部生 15 名以上）、日本の高校 2 校でのボランティア講師。
+- *国際的な働き方* --- 日本、湾岸諸国、西アフリカでフランス語 / 英語 / 日本語で活動。
+- *締切下の執筆* --- ジャーナル・会議での第一著者投稿 12 件中 11 件採択。
+- *再現性のある研究* --- バージョン管理、評価ハーネス、アブレーション、マルチ シード検証。
+
+~~~
+{}{raw}
+<p class="skills-cta">
+  協業のお問い合わせ:
+  <a href="mailto:mesabo18@gmail.com">mesabo18@gmail.com</a>
+  &middot;
+  <a href="https://www.linkedin.com/in/mesabo/" target="_blank" rel="noopener">LinkedIn</a>
+</p>
+~~~

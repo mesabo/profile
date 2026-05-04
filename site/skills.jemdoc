@@ -1,0 +1,168 @@
+# jemdoc: menu{MENU}{skills.html}, nofooter
+= Skills
+
+A scannable view of the languages, tools, and methods I work with day to day.
+
+== Programming languages
+
+~~~
+{}{raw}
+<h4 class="skills-tier">Daily / strong</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/python.svg" alt="" /> Python</span>
+  <span><img src="/assets/icons/java.svg" alt="" /> Java</span>
+  <span><img src="/assets/icons/dart.svg" alt="" /> Dart</span>
+  <span><img src="/assets/icons/postgresql.svg" alt="" /> SQL</span>
+  <span><img src="/assets/icons/gnubash.svg" alt="" /> Bash</span>
+</div>
+
+<h4 class="skills-tier">Working / regular</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/cplusplus.svg" alt="" /> C / C++ <small>(GPU / CUDA glue)</small></span>
+  <span><img src="/assets/icons/javascript.svg" alt="" /> JavaScript</span>
+</div>
+
+<h4 class="skills-tier">Reading / occasional</h4>
+<div class="skills-chips skills-chips-soft">
+  <span><img src="/assets/icons/go.svg" alt="" /> Go</span>
+  <span><img src="/assets/icons/swift.svg" alt="" /> Swift</span>
+  <span><img src="/assets/icons/kotlin.svg" alt="" /> Kotlin</span>
+  <span><img src="/assets/icons/typescript.svg" alt="" /> TypeScript</span>
+</div>
+~~~
+
+== AI / ML stack
+
+~~~
+{}{raw}
+<h4 class="skills-tier">Frameworks</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/pytorch.svg" alt="" /> PyTorch</span>
+  <span><img src="/assets/icons/huggingface.svg" alt="" /> Hugging Face Transformers</span>
+  <span>vLLM</span>
+  <span><img src="/assets/icons/scikitlearn.svg" alt="" /> scikit-learn</span>
+  <span><img src="/assets/icons/pandas.svg" alt="" /> pandas</span>
+  <span><img src="/assets/icons/numpy.svg" alt="" /> NumPy</span>
+</div>
+
+<h4 class="skills-tier">LLMs &amp; APIs</h4>
+<div class="skills-chips">
+  <span>OpenAI</span>
+  <span><img src="/assets/icons/anthropic.svg" alt="" /> Anthropic</span>
+  <span>Llama</span>
+  <span>Qwen</span>
+  <span>Phi</span>
+</div>
+
+<h4 class="skills-tier">Topics</h4>
+<div class="skills-chips skills-chips-soft">
+  <span>Time-series forecasting</span>
+  <span>Spectral reprogramming</span>
+  <span>Graph neural networks</span>
+  <span>Federated learning (FL)</span>
+  <span>Prompt engineering</span>
+  <span>Adversarial / hallucination testing</span>
+</div>
+~~~
+
+== Backend &amp; APIs
+
+~~~
+{}{raw}
+<div class="skills-chips">
+  <span><img src="/assets/icons/flask.svg" alt="" /> Flask</span>
+  <span><img src="/assets/icons/fastapi.svg" alt="" /> FastAPI</span>
+  <span><img src="/assets/icons/nodedotjs.svg" alt="" /> Node.js</span>
+  <span><img src="/assets/icons/express.svg" alt="" /> Express</span>
+  <span><img src="/assets/icons/graphql.svg" alt="" /> GraphQL</span>
+  <span>REST</span>
+  <span><img src="/assets/icons/jsonwebtokens.svg" alt="" /> JWT / OAuth</span>
+</div>
+~~~
+
+== Databases
+
+~~~
+{}{raw}
+<div class="skills-chips">
+  <span><img src="/assets/icons/mongodb.svg" alt="" /> MongoDB</span>
+  <span><img src="/assets/icons/postgresql.svg" alt="" /> PostgreSQL</span>
+  <span><img src="/assets/icons/mysql.svg" alt="" /> MySQL</span>
+  <span><img src="/assets/icons/sqlite.svg" alt="" /> SQLite</span>
+</div>
+<p class="skills-note">Schema design, indexing, query optimisation. Data engineering on PMU and IoT sensor streams.</p>
+~~~
+
+== Frontend &amp; mobile
+
+~~~
+{}{raw}
+<div class="skills-chips">
+  <span><img src="/assets/icons/flutter.svg" alt="" /> Flutter / Dart</span>
+  <span><img src="/assets/icons/react.svg" alt="" /> React <small>(Hooks, Router, Vite)</small></span>
+  <span><img src="/assets/icons/html5.svg" alt="" /> HTML5</span>
+  <span><img src="/assets/icons/css3.svg" alt="" /> CSS3</span>
+</div>
+<p class="skills-note">Mobile apps shipped: <em>crudium</em>&nbsp;⭐, <em>chronohouse</em>, <em>progistack_mobile</em>, <em>flutter_graphql_io</em>.</p>
+~~~
+
+== DevOps · Cloud · Infrastructure
+
+~~~
+{}{raw}
+<h4 class="skills-tier">Containers &amp; CI</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/docker.svg" alt="" /> Docker</span>
+  <span><img src="/assets/icons/docker.svg" alt="" /> docker-compose</span>
+  <span><img src="/assets/icons/githubactions.svg" alt="" /> GitHub Actions</span>
+  <span><img src="/assets/icons/make.svg" alt="" /> Make</span>
+</div>
+
+<h4 class="skills-tier">Cloud — Google Cloud Platform</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Compute Engine</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Cloud Storage</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> Cloud Run</span>
+  <span><img src="/assets/icons/googlecloud.svg" alt="" /> IAM</span>
+</div>
+
+<h4 class="skills-tier">Servers &amp; GPU</h4>
+<div class="skills-chips">
+  <span><img src="/assets/icons/linux.svg" alt="" /> Linux server admin</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> Multi-GPU bring-up</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> CUDA toolchain</span>
+  <span><img src="/assets/icons/nvidia.svg" alt="" /> NVIDIA drivers</span>
+  <span>Distributed training (DDP)</span>
+  <span>Inference serving</span>
+</div>
+~~~
+
+== Spoken languages
+
+~~~
+{}{raw}
+<div class="skills-chips skills-chips-langs">
+  <span>🇫🇷 French <small>native</small></span>
+  <span>🇬🇧 English <small>fluent</small></span>
+  <span>🇯🇵 Japanese <small>daily conversational, ongoing study — JLPT N4</small></span>
+</div>
+~~~
+
+== Methods · ways of working
+
+- *Solo work* --- end-to-end ownership: research code, infrastructure, writing, deploy.
+- *Team work* --- international collaborations (research papers), JICA scholar, YuLab seminars.
+- *Mentorship* --- TA &amp; RA at Hosei IIST; ESATIC mentor (15+ undergraduates); volunteer lecturer at 2 Japanese high schools.
+- *Cross-cultural* --- comfortable across Japan, the Gulf, and West Africa, in French / English / Japanese.
+- *Writing under deadline pressure* --- 11 of 12 first-author submissions accepted across journals and conferences.
+- *Reproducible research* --- version control, evaluation harnesses, ablations, multi-seed validation.
+
+~~~
+{}{raw}
+<p class="skills-cta">
+  Looking for collaboration?
+  <a href="mailto:mesabo18@gmail.com">mesabo18@gmail.com</a>
+  &middot;
+  <a href="https://www.linkedin.com/in/mesabo/" target="_blank" rel="noopener">LinkedIn</a>
+</p>
+~~~

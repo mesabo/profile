@@ -7,7 +7,7 @@
 
 JEMDOC := python3 tools/jemdoc
 CONF   := mysite.conf
-PAGES  := index publications research experiences awards other
+PAGES  := index publications research experiences skills awards other
 BUILD  := build
 
 EN_HTMLS := $(addprefix $(BUILD)/,$(addsuffix .html,$(PAGES)))
