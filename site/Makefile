@@ -52,7 +52,8 @@ inject-date:
 	@d=$$(date -u +"%Y-%m"); \
 	v=$$(date -u +"%Y%m%d%H%M"); \
 	find $(BUILD) -name '*.html' -exec sed -i '' "s/__BUILD_DATE__/$$d/g" {} \; ; \
-	find $(BUILD) -name '*.html' -exec sed -i '' "s|/mysite.css\"|/mysite.css?v=$$v\"|g" {} \;
+	find $(BUILD) -name '*.html' -exec sed -i '' "s|/mysite.css\"|/mysite.css?v=$$v\"|g" {} \; ; \
+	find $(BUILD) -name '*.html' -exec sed -i '' "s|/assets/photo.png\"|/assets/photo.png?v=$$v\"|g" {} \;
 	@# inject per-page hreflang tags (only for pages that have all 3 language versions)
 	@for page in index publications research experiences skills awards other; do \
 	  for f in $(BUILD)/$$page.html $(BUILD)/fr/$$page.html $(BUILD)/ja/$$page.html; do \

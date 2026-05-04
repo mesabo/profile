@@ -388,9 +388,9 @@ strong, b { color: var(--ink); font-weight: 600; }
 }
 
 .hero img.avatar {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
+  width: 140px;
+  height: 180px;
+  border-radius: 6px;
   object-fit: cover;
   border: 3px solid var(--accent);
   flex-shrink: 0;
@@ -1122,7 +1122,7 @@ div#fwtitle { margin-bottom: 1.5rem; }
     gap: 1rem;
     text-align: left;
   }
-  .hero img.avatar { width: 110px; height: 110px; }
+  .hero img.avatar { width: 120px; height: 150px; }
   .hero .hero-name { font-size: 1.7rem; }
   h1 { font-size: 1.7rem; }
 }
